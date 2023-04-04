@@ -1,0 +1,1439 @@
+{
+  "depGraph" : {
+    "schemaVersion" : "1.2.0",
+    "pkgManager" : {
+      "name" : "maven"
+    },
+    "pkgs" : [ {
+      "id" : "org.acme.dbaas:mongodb-quarkus@1.0.0-SNAPSHOT",
+      "info" : {
+        "name" : "org.acme.dbaas:mongodb-quarkus",
+        "version" : "1.0.0-SNAPSHOT"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-resteasy@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-resteasy",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-resteasy-mutiny@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-resteasy-mutiny",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "org.keycloak:keycloak-saml-core@1.8.1.Final",
+      "info" : {
+        "name" : "org.keycloak:keycloak-saml-core",
+        "version" : "1.8.1.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-smallrye-context-propagation@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-smallrye-context-propagation",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-resteasy-jackson@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-resteasy-jackson",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-mongodb-client@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-mongodb-client",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-container-image-docker@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-container-image-docker",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-kubernetes-service-binding@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-kubernetes-service-binding",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-vertx-http@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-vertx-http",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-resteasy-server-common@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-resteasy-server-common",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-core@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-core",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-arc@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-arc",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-resteasy-mutiny-common@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-resteasy-mutiny-common",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "org.jboss.resteasy:resteasy-client@4.5.9.Final",
+      "info" : {
+        "name" : "org.jboss.resteasy:resteasy-client",
+        "version" : "4.5.9.Final"
+      }
+    }, {
+      "id" : "org.apache.santuario:xmlsec@1.5.1",
+      "info" : {
+        "name" : "org.apache.santuario:xmlsec",
+        "version" : "1.5.1"
+      }
+    }, {
+      "id" : "io.smallrye:smallrye-context-propagation@1.1.0",
+      "info" : {
+        "name" : "io.smallrye:smallrye-context-propagation",
+        "version" : "1.1.0"
+      }
+    }, {
+      "id" : "jakarta.enterprise:jakarta.enterprise.cdi-api@2.0.2",
+      "info" : {
+        "name" : "jakarta.enterprise:jakarta.enterprise.cdi-api",
+        "version" : "2.0.2"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-jackson@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-jackson",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "org.jboss.resteasy:resteasy-jackson2-provider@4.5.9.Final",
+      "info" : {
+        "name" : "org.jboss.resteasy:resteasy-jackson2-provider",
+        "version" : "4.5.9.Final"
+      }
+    }, {
+      "id" : "org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec@2.0.0.Final",
+      "info" : {
+        "name" : "org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec",
+        "version" : "2.0.0.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-mutiny@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-mutiny",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-vertx-core@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-vertx-core",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-mutiny-reactive-streams-operators@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-mutiny-reactive-streams-operators",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "org.mongodb:mongodb-driver-sync@4.2.3",
+      "info" : {
+        "name" : "org.mongodb:mongodb-driver-sync",
+        "version" : "4.2.3"
+      }
+    }, {
+      "id" : "org.mongodb:mongodb-driver-reactivestreams@4.2.3",
+      "info" : {
+        "name" : "org.mongodb:mongodb-driver-reactivestreams",
+        "version" : "4.2.3"
+      }
+    }, {
+      "id" : "org.mongodb:mongodb-crypt@1.2.0",
+      "info" : {
+        "name" : "org.mongodb:mongodb-crypt",
+        "version" : "1.2.0"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-container-image@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-container-image",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-security-runtime-spi@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-security-runtime-spi",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-vertx-http-dev-console-runtime-spi@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-vertx-http-dev-console-runtime-spi",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus.security:quarkus-security@1.1.4.Final",
+      "info" : {
+        "name" : "io.quarkus.security:quarkus-security",
+        "version" : "1.1.4.Final"
+      }
+    }, {
+      "id" : "io.vertx:vertx-web@3.9.6",
+      "info" : {
+        "name" : "io.vertx:vertx-web",
+        "version" : "3.9.6"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-resteasy-common@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-resteasy-common",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "jakarta.validation:jakarta.validation-api@2.0.2",
+      "info" : {
+        "name" : "jakarta.validation:jakarta.validation-api",
+        "version" : "2.0.2"
+      }
+    }, {
+      "id" : "jakarta.annotation:jakarta.annotation-api@1.3.5",
+      "info" : {
+        "name" : "jakarta.annotation:jakarta.annotation-api",
+        "version" : "1.3.5"
+      }
+    }, {
+      "id" : "jakarta.inject:jakarta.inject-api@1.0",
+      "info" : {
+        "name" : "jakarta.inject:jakarta.inject-api",
+        "version" : "1.0"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-ide-launcher@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-ide-launcher",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-development-mode-spi@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-development-mode-spi",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.smallrye.config:smallrye-config@1.11.1",
+      "info" : {
+        "name" : "io.smallrye.config:smallrye-config",
+        "version" : "1.11.1"
+      }
+    }, {
+      "id" : "org.jboss.logging:jboss-logging@3.4.1.Final",
+      "info" : {
+        "name" : "org.jboss.logging:jboss-logging",
+        "version" : "3.4.1.Final"
+      }
+    }, {
+      "id" : "org.jboss.logmanager:jboss-logmanager-embedded@1.0.9",
+      "info" : {
+        "name" : "org.jboss.logmanager:jboss-logmanager-embedded",
+        "version" : "1.0.9"
+      }
+    }, {
+      "id" : "org.jboss.logging:jboss-logging-annotations@2.2.0.Final",
+      "info" : {
+        "name" : "org.jboss.logging:jboss-logging-annotations",
+        "version" : "2.2.0.Final"
+      }
+    }, {
+      "id" : "org.jboss.threads:jboss-threads@3.2.0.Final",
+      "info" : {
+        "name" : "org.jboss.threads:jboss-threads",
+        "version" : "3.2.0.Final"
+      }
+    }, {
+      "id" : "org.slf4j:slf4j-api@1.7.30",
+      "info" : {
+        "name" : "org.slf4j:slf4j-api",
+        "version" : "1.7.30"
+      }
+    }, {
+      "id" : "org.jboss.slf4j:slf4j-jboss-logmanager@1.1.0.Final",
+      "info" : {
+        "name" : "org.jboss.slf4j:slf4j-jboss-logmanager",
+        "version" : "1.1.0.Final"
+      }
+    }, {
+      "id" : "org.graalvm.sdk:graal-sdk@21.0.0",
+      "info" : {
+        "name" : "org.graalvm.sdk:graal-sdk",
+        "version" : "21.0.0"
+      }
+    }, {
+      "id" : "org.wildfly.common:wildfly-common@1.5.4.Final-format-001",
+      "info" : {
+        "name" : "org.wildfly.common:wildfly-common",
+        "version" : "1.5.4.Final-format-001"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-bootstrap-runner@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-bootstrap-runner",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.quarkus.arc:arc@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus.arc:arc",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api@1.0.1",
+      "info" : {
+        "name" : "org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api",
+        "version" : "1.0.1"
+      }
+    }, {
+      "id" : "org.jboss.resteasy:resteasy-client-api@4.5.9.Final",
+      "info" : {
+        "name" : "org.jboss.resteasy:resteasy-client-api",
+        "version" : "4.5.9.Final"
+      }
+    }, {
+      "id" : "org.jboss.resteasy:resteasy-core-spi@4.5.9.Final",
+      "info" : {
+        "name" : "org.jboss.resteasy:resteasy-core-spi",
+        "version" : "4.5.9.Final"
+      }
+    }, {
+      "id" : "org.jboss.resteasy:resteasy-core@4.5.9.Final",
+      "info" : {
+        "name" : "org.jboss.resteasy:resteasy-core",
+        "version" : "4.5.9.Final"
+      }
+    }, {
+      "id" : "org.apache.httpcomponents:httpclient@4.5.13",
+      "info" : {
+        "name" : "org.apache.httpcomponents:httpclient",
+        "version" : "4.5.13"
+      }
+    }, {
+      "id" : "commons-codec:commons-codec@1.14",
+      "info" : {
+        "name" : "commons-codec:commons-codec",
+        "version" : "1.14"
+      }
+    }, {
+      "id" : "commons-io:commons-io@2.8.0",
+      "info" : {
+        "name" : "commons-io:commons-io",
+        "version" : "2.8.0"
+      }
+    }, {
+      "id" : "org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec@2.0.1.Final",
+      "info" : {
+        "name" : "org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec",
+        "version" : "2.0.1.Final"
+      }
+    }, {
+      "id" : "commons-logging:commons-logging@1.1.1",
+      "info" : {
+        "name" : "commons-logging:commons-logging",
+        "version" : "1.1.1"
+      }
+    }, {
+      "id" : "io.smallrye:smallrye-context-propagation-api@1.1.0",
+      "info" : {
+        "name" : "io.smallrye:smallrye-context-propagation-api",
+        "version" : "1.1.0"
+      }
+    }, {
+      "id" : "io.smallrye:smallrye-context-propagation-storage@1.1.0",
+      "info" : {
+        "name" : "io.smallrye:smallrye-context-propagation-storage",
+        "version" : "1.1.0"
+      }
+    }, {
+      "id" : "org.eclipse.microprofile.config:microprofile-config-api@1.4",
+      "info" : {
+        "name" : "org.eclipse.microprofile.config:microprofile-config-api",
+        "version" : "1.4"
+      }
+    }, {
+      "id" : "jakarta.el:jakarta.el-api@3.0.3",
+      "info" : {
+        "name" : "jakarta.el:jakarta.el-api",
+        "version" : "3.0.3"
+      }
+    }, {
+      "id" : "jakarta.interceptor:jakarta.interceptor-api@1.2.5",
+      "info" : {
+        "name" : "jakarta.interceptor:jakarta.interceptor-api",
+        "version" : "1.2.5"
+      }
+    }, {
+      "id" : "com.fasterxml.jackson.core:jackson-databind@2.12.1",
+      "info" : {
+        "name" : "com.fasterxml.jackson.core:jackson-databind",
+        "version" : "2.12.1"
+      }
+    }, {
+      "id" : "com.fasterxml.jackson.datatype:jackson-datatype-jsr310@2.12.1",
+      "info" : {
+        "name" : "com.fasterxml.jackson.datatype:jackson-datatype-jsr310",
+        "version" : "2.12.1"
+      }
+    }, {
+      "id" : "com.fasterxml.jackson.datatype:jackson-datatype-jdk8@2.12.1",
+      "info" : {
+        "name" : "com.fasterxml.jackson.datatype:jackson-datatype-jdk8",
+        "version" : "2.12.1"
+      }
+    }, {
+      "id" : "com.fasterxml.jackson.module:jackson-module-parameter-names@2.12.1",
+      "info" : {
+        "name" : "com.fasterxml.jackson.module:jackson-module-parameter-names",
+        "version" : "2.12.1"
+      }
+    }, {
+      "id" : "org.jboss.resteasy:resteasy-jaxb-provider@4.5.9.Final",
+      "info" : {
+        "name" : "org.jboss.resteasy:resteasy-jaxb-provider",
+        "version" : "4.5.9.Final"
+      }
+    }, {
+      "id" : "com.fasterxml.jackson.core:jackson-core@2.12.1",
+      "info" : {
+        "name" : "com.fasterxml.jackson.core:jackson-core",
+        "version" : "2.12.1"
+      }
+    }, {
+      "id" : "com.fasterxml.jackson.core:jackson-annotations@2.12.1",
+      "info" : {
+        "name" : "com.fasterxml.jackson.core:jackson-annotations",
+        "version" : "2.12.1"
+      }
+    }, {
+      "id" : "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider@2.12.1",
+      "info" : {
+        "name" : "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider",
+        "version" : "2.12.1"
+      }
+    }, {
+      "id" : "com.github.java-json-tools:json-patch@1.13",
+      "info" : {
+        "name" : "com.github.java-json-tools:json-patch",
+        "version" : "1.13"
+      }
+    }, {
+      "id" : "io.smallrye.reactive:mutiny@0.14.0",
+      "info" : {
+        "name" : "io.smallrye.reactive:mutiny",
+        "version" : "0.14.0"
+      }
+    }, {
+      "id" : "io.smallrye.reactive:mutiny-smallrye-context-propagation@0.14.0",
+      "info" : {
+        "name" : "io.smallrye.reactive:mutiny-smallrye-context-propagation",
+        "version" : "0.14.0"
+      }
+    }, {
+      "id" : "io.quarkus:quarkus-netty@1.13.3.Final",
+      "info" : {
+        "name" : "io.quarkus:quarkus-netty",
+        "version" : "1.13.3.Final"
+      }
+    }, {
+      "id" : "io.vertx:vertx-core@3.9.6",
+      "info" : {
+        "name" : "io.vertx:vertx-core",
+        "version" : "3.9.6"
+      }
+    }, {
+      "id" : "org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-api@1.0.1",
+      "info" : {
+        "name" : "org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-api",
+        "version" : "1.0.1"
+      }
+    }, {
+      "id" : "org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-core@1.0.1",
+      "info" : {
+        "name" : "org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-core",
+        "version" : "1.0.1"
+      }
+    }, {
+      "id" : "io.smallrye.reactive:mutiny-reactive-streams-operators@0.14.0",
+      "info" : {
+        "name" : "io.smallrye.reactive:mutiny-reactive-streams-operators",
+        "version" : "0.14.0"
+      }
+    }, {
+      "id" : "org.mongodb:bson@4.2.3",
+      "info" : {
+        "name" : "org.mongodb:bson",
+        "version" : "4.2.3"
+      }
+    }, {
+      "id" : "org.mongodb:mongodb-driver-core@4.2.3",
+      "info" : {
+        "name" : "org.mongodb:mongodb-driver-core",
+        "version" : "4.2.3"
+      }
+    }, {
+      "id" : "org.reactivestreams:reactive-streams@1.0.3",
+      "info" : {
+        "name" : "org.reactivestreams:reactive-streams",
+        "version" : "1.0.3"
+      }
+    }, {
+      "id" : "io.projectreactor:reactor-core@3.2.22.RELEASE",
+      "info" : {
+        "name" : "io.projectreactor:reactor-core",
+        "version" : "3.2.22.RELEASE"
+      }
+    }, {
+      "id" : "net.java.dev.jna:jna@5.3.1",
+      "info" : {
+        "name" : "net.java.dev.jna:jna",
+        "version" : "5.3.1"
+      }
+    }, {
+      "id" : "io.vertx:vertx-web-common@3.9.6",
+      "info" : {
+        "name" : "io.vertx:vertx-web-common",
+        "version" : "3.9.6"
+      }
+    }, {
+      "id" : "io.vertx:vertx-auth-common@3.9.6",
+      "info" : {
+        "name" : "io.vertx:vertx-auth-common",
+        "version" : "3.9.6"
+      }
+    }, {
+      "id" : "io.vertx:vertx-bridge-common@3.9.6",
+      "info" : {
+        "name" : "io.vertx:vertx-bridge-common",
+        "version" : "3.9.6"
+      }
+    }, {
+      "id" : "com.sun.activation:jakarta.activation@1.2.1",
+      "info" : {
+        "name" : "com.sun.activation:jakarta.activation",
+        "version" : "1.2.1"
+      }
+    }, {
+      "id" : "io.smallrye.common:smallrye-common-annotation@1.5.0",
+      "info" : {
+        "name" : "io.smallrye.common:smallrye-common-annotation",
+        "version" : "1.5.0"
+      }
+    }, {
+      "id" : "io.smallrye.common:smallrye-common-expression@1.5.0",
+      "info" : {
+        "name" : "io.smallrye.common:smallrye-common-expression",
+        "version" : "1.5.0"
+      }
+    }, {
+      "id" : "io.smallrye.common:smallrye-common-constraint@1.5.0",
+      "info" : {
+        "name" : "io.smallrye.common:smallrye-common-constraint",
+        "version" : "1.5.0"
+      }
+    }, {
+      "id" : "io.smallrye.common:smallrye-common-classloader@1.5.0",
+      "info" : {
+        "name" : "io.smallrye.common:smallrye-common-classloader",
+        "version" : "1.5.0"
+      }
+    }, {
+      "id" : "io.smallrye.config:smallrye-config-common@1.11.1",
+      "info" : {
+        "name" : "io.smallrye.config:smallrye-config-common",
+        "version" : "1.11.1"
+      }
+    }, {
+      "id" : "io.smallrye.common:smallrye-common-io@1.5.0",
+      "info" : {
+        "name" : "io.smallrye.common:smallrye-common-io",
+        "version" : "1.5.0"
+      }
+    }, {
+      "id" : "jakarta.transaction:jakarta.transaction-api@1.3.3",
+      "info" : {
+        "name" : "jakarta.transaction:jakarta.transaction-api",
+        "version" : "1.3.3"
+      }
+    }, {
+      "id" : "com.ibm.async:asyncutil@0.1.0",
+      "info" : {
+        "name" : "com.ibm.async:asyncutil",
+        "version" : "0.1.0"
+      }
+    }, {
+      "id" : "org.apache.httpcomponents:httpcore@4.4.14",
+      "info" : {
+        "name" : "org.apache.httpcomponents:httpcore",
+        "version" : "4.4.14"
+      }
+    }, {
+      "id" : "org.glassfish.jaxb:jaxb-runtime@2.3.3-b02",
+      "info" : {
+        "name" : "org.glassfish.jaxb:jaxb-runtime",
+        "version" : "2.3.3-b02"
+      }
+    }, {
+      "id" : "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base@2.12.1",
+      "info" : {
+        "name" : "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base",
+        "version" : "2.12.1"
+      }
+    }, {
+      "id" : "com.fasterxml.jackson.module:jackson-module-jaxb-annotations@2.12.1",
+      "info" : {
+        "name" : "com.fasterxml.jackson.module:jackson-module-jaxb-annotations",
+        "version" : "2.12.1"
+      }
+    }, {
+      "id" : "com.github.java-json-tools:msg-simple@1.2",
+      "info" : {
+        "name" : "com.github.java-json-tools:msg-simple",
+        "version" : "1.2"
+      }
+    }, {
+      "id" : "com.github.java-json-tools:jackson-coreutils@2.0",
+      "info" : {
+        "name" : "com.github.java-json-tools:jackson-coreutils",
+        "version" : "2.0"
+      }
+    }, {
+      "id" : "io.netty:netty-codec@4.1.49.Final",
+      "info" : {
+        "name" : "io.netty:netty-codec",
+        "version" : "4.1.49.Final"
+      }
+    }, {
+      "id" : "io.netty:netty-handler@4.1.49.Final",
+      "info" : {
+        "name" : "io.netty:netty-handler",
+        "version" : "4.1.49.Final"
+      }
+    }, {
+      "id" : "io.netty:netty-common@4.1.49.Final",
+      "info" : {
+        "name" : "io.netty:netty-common",
+        "version" : "4.1.49.Final"
+      }
+    }, {
+      "id" : "io.netty:netty-buffer@4.1.49.Final",
+      "info" : {
+        "name" : "io.netty:netty-buffer",
+        "version" : "4.1.49.Final"
+      }
+    }, {
+      "id" : "io.netty:netty-transport@4.1.49.Final",
+      "info" : {
+        "name" : "io.netty:netty-transport",
+        "version" : "4.1.49.Final"
+      }
+    }, {
+      "id" : "io.netty:netty-handler-proxy@4.1.49.Final",
+      "info" : {
+        "name" : "io.netty:netty-handler-proxy",
+        "version" : "4.1.49.Final"
+      }
+    }, {
+      "id" : "io.netty:netty-codec-http@4.1.49.Final",
+      "info" : {
+        "name" : "io.netty:netty-codec-http",
+        "version" : "4.1.49.Final"
+      }
+    }, {
+      "id" : "io.netty:netty-codec-http2@4.1.49.Final",
+      "info" : {
+        "name" : "io.netty:netty-codec-http2",
+        "version" : "4.1.49.Final"
+      }
+    }, {
+      "id" : "io.netty:netty-resolver@4.1.49.Final",
+      "info" : {
+        "name" : "io.netty:netty-resolver",
+        "version" : "4.1.49.Final"
+      }
+    }, {
+      "id" : "io.netty:netty-resolver-dns@4.1.49.Final",
+      "info" : {
+        "name" : "io.netty:netty-resolver-dns",
+        "version" : "4.1.49.Final"
+      }
+    }, {
+      "id" : "io.smallrye.common:smallrye-common-function@1.5.0",
+      "info" : {
+        "name" : "io.smallrye.common:smallrye-common-function",
+        "version" : "1.5.0"
+      }
+    }, {
+      "id" : "org.glassfish.jaxb:txw2@2.3.3-b02",
+      "info" : {
+        "name" : "org.glassfish.jaxb:txw2",
+        "version" : "2.3.3-b02"
+      }
+    }, {
+      "id" : "com.sun.istack:istack-commons-runtime@3.0.10",
+      "info" : {
+        "name" : "com.sun.istack:istack-commons-runtime",
+        "version" : "3.0.10"
+      }
+    }, {
+      "id" : "jakarta.activation:jakarta.activation-api@1.2.1",
+      "info" : {
+        "name" : "jakarta.activation:jakarta.activation-api",
+        "version" : "1.2.1"
+      }
+    }, {
+      "id" : "com.github.java-json-tools:btf@1.3",
+      "info" : {
+        "name" : "com.github.java-json-tools:btf",
+        "version" : "1.3"
+      }
+    }, {
+      "id" : "io.netty:netty-codec-socks@4.1.49.Final",
+      "info" : {
+        "name" : "io.netty:netty-codec-socks",
+        "version" : "4.1.49.Final"
+      }
+    }, {
+      "id" : "io.netty:netty-codec-dns@4.1.49.Final",
+      "info" : {
+        "name" : "io.netty:netty-codec-dns",
+        "version" : "4.1.49.Final"
+      }
+    } ],
+    "graph" : {
+      "rootNodeId" : "org.acme.dbaas:mongodb-quarkus@1.0.0-SNAPSHOT",
+      "nodes" : [ {
+        "nodeId" : "org.acme.dbaas:mongodb-quarkus@1.0.0-SNAPSHOT",
+        "pkgId" : "org.acme.dbaas:mongodb-quarkus@1.0.0-SNAPSHOT",
+        "deps" : [ {
+          "nodeId" : "io.quarkus:quarkus-resteasy@1.13.3.Final"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-resteasy-mutiny@1.13.3.Final"
+        }, {
+          "nodeId" : "org.keycloak:keycloak-saml-core@1.8.1.Final"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-smallrye-context-propagation@1.13.3.Final"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-resteasy-jackson@1.13.3.Final"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-mongodb-client@1.13.3.Final"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-container-image-docker@1.13.3.Final"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-kubernetes-service-binding@1.13.3.Final"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-resteasy@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-resteasy@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "io.quarkus:quarkus-vertx-http@1.13.3.Final"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-resteasy-server-common@1.13.3.Final"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-resteasy-mutiny@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-resteasy-mutiny@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "io.quarkus:quarkus-core@1.13.3.Final"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-arc@1.13.3.Final"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-resteasy-mutiny-common@1.13.3.Final"
+        }, {
+          "nodeId" : "org.jboss.resteasy:resteasy-client@4.5.9.Final"
+        } ]
+      }, {
+        "nodeId" : "org.keycloak:keycloak-saml-core@1.8.1.Final",
+        "pkgId" : "org.keycloak:keycloak-saml-core@1.8.1.Final",
+        "deps" : [ {
+          "nodeId" : "org.apache.santuario:xmlsec@1.5.1"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-smallrye-context-propagation@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-smallrye-context-propagation@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "io.smallrye:smallrye-context-propagation@1.1.0"
+        }, {
+          "nodeId" : "jakarta.enterprise:jakarta.enterprise.cdi-api@2.0.2"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-resteasy-jackson@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-resteasy-jackson@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "io.quarkus:quarkus-jackson@1.13.3.Final"
+        }, {
+          "nodeId" : "org.jboss.resteasy:resteasy-jackson2-provider@4.5.9.Final"
+        }, {
+          "nodeId" : "org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec@2.0.0.Final"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-mongodb-client@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-mongodb-client@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "io.quarkus:quarkus-mutiny@1.13.3.Final"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-vertx-core@1.13.3.Final"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-mutiny-reactive-streams-operators@1.13.3.Final"
+        }, {
+          "nodeId" : "org.mongodb:mongodb-driver-sync@4.2.3"
+        }, {
+          "nodeId" : "org.mongodb:mongodb-driver-reactivestreams@4.2.3"
+        }, {
+          "nodeId" : "org.mongodb:mongodb-crypt@1.2.0"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-container-image-docker@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-container-image-docker@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "io.quarkus:quarkus-container-image@1.13.3.Final"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-kubernetes-service-binding@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-kubernetes-service-binding@1.13.3.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-vertx-http@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-vertx-http@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "io.quarkus:quarkus-security-runtime-spi@1.13.3.Final"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-vertx-http-dev-console-runtime-spi@1.13.3.Final"
+        }, {
+          "nodeId" : "io.quarkus.security:quarkus-security@1.1.4.Final"
+        }, {
+          "nodeId" : "io.vertx:vertx-web@3.9.6"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-resteasy-server-common@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-resteasy-server-common@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "io.quarkus:quarkus-resteasy-common@1.13.3.Final"
+        }, {
+          "nodeId" : "jakarta.validation:jakarta.validation-api@2.0.2"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-core@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-core@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "jakarta.annotation:jakarta.annotation-api@1.3.5"
+        }, {
+          "nodeId" : "jakarta.inject:jakarta.inject-api@1.0"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-ide-launcher@1.13.3.Final"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-development-mode-spi@1.13.3.Final"
+        }, {
+          "nodeId" : "io.smallrye.config:smallrye-config@1.11.1"
+        }, {
+          "nodeId" : "org.jboss.logging:jboss-logging@3.4.1.Final"
+        }, {
+          "nodeId" : "org.jboss.logmanager:jboss-logmanager-embedded@1.0.9"
+        }, {
+          "nodeId" : "org.jboss.logging:jboss-logging-annotations@2.2.0.Final"
+        }, {
+          "nodeId" : "org.jboss.threads:jboss-threads@3.2.0.Final"
+        }, {
+          "nodeId" : "org.slf4j:slf4j-api@1.7.30"
+        }, {
+          "nodeId" : "org.jboss.slf4j:slf4j-jboss-logmanager@1.1.0.Final"
+        }, {
+          "nodeId" : "org.graalvm.sdk:graal-sdk@21.0.0"
+        }, {
+          "nodeId" : "org.wildfly.common:wildfly-common@1.5.4.Final-format-001"
+        }, {
+          "nodeId" : "io.quarkus:quarkus-bootstrap-runner@1.13.3.Final"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-arc@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-arc@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "io.quarkus.arc:arc@1.13.3.Final"
+        }, {
+          "nodeId" : "org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api@1.0.1"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-resteasy-mutiny-common@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-resteasy-mutiny-common@1.13.3.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.jboss.resteasy:resteasy-client@4.5.9.Final",
+        "pkgId" : "org.jboss.resteasy:resteasy-client@4.5.9.Final",
+        "deps" : [ {
+          "nodeId" : "org.jboss.resteasy:resteasy-client-api@4.5.9.Final"
+        }, {
+          "nodeId" : "org.jboss.resteasy:resteasy-core-spi@4.5.9.Final"
+        }, {
+          "nodeId" : "org.jboss.resteasy:resteasy-core@4.5.9.Final"
+        }, {
+          "nodeId" : "org.apache.httpcomponents:httpclient@4.5.13"
+        }, {
+          "nodeId" : "commons-codec:commons-codec@1.14"
+        }, {
+          "nodeId" : "commons-io:commons-io@2.8.0"
+        }, {
+          "nodeId" : "org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec@2.0.1.Final"
+        } ]
+      }, {
+        "nodeId" : "org.apache.santuario:xmlsec@1.5.1",
+        "pkgId" : "org.apache.santuario:xmlsec@1.5.1",
+        "deps" : [ {
+          "nodeId" : "commons-logging:commons-logging@1.1.1"
+        } ]
+      }, {
+        "nodeId" : "io.smallrye:smallrye-context-propagation@1.1.0",
+        "pkgId" : "io.smallrye:smallrye-context-propagation@1.1.0",
+        "deps" : [ {
+          "nodeId" : "io.smallrye:smallrye-context-propagation-api@1.1.0"
+        }, {
+          "nodeId" : "io.smallrye:smallrye-context-propagation-storage@1.1.0"
+        }, {
+          "nodeId" : "org.eclipse.microprofile.config:microprofile-config-api@1.4"
+        } ]
+      }, {
+        "nodeId" : "jakarta.enterprise:jakarta.enterprise.cdi-api@2.0.2",
+        "pkgId" : "jakarta.enterprise:jakarta.enterprise.cdi-api@2.0.2",
+        "deps" : [ {
+          "nodeId" : "jakarta.el:jakarta.el-api@3.0.3"
+        }, {
+          "nodeId" : "jakarta.interceptor:jakarta.interceptor-api@1.2.5"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-jackson@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-jackson@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "com.fasterxml.jackson.core:jackson-databind@2.12.1"
+        }, {
+          "nodeId" : "com.fasterxml.jackson.datatype:jackson-datatype-jsr310@2.12.1"
+        }, {
+          "nodeId" : "com.fasterxml.jackson.datatype:jackson-datatype-jdk8@2.12.1"
+        }, {
+          "nodeId" : "com.fasterxml.jackson.module:jackson-module-parameter-names@2.12.1"
+        } ]
+      }, {
+        "nodeId" : "org.jboss.resteasy:resteasy-jackson2-provider@4.5.9.Final",
+        "pkgId" : "org.jboss.resteasy:resteasy-jackson2-provider@4.5.9.Final",
+        "deps" : [ {
+          "nodeId" : "org.jboss.resteasy:resteasy-jaxb-provider@4.5.9.Final"
+        }, {
+          "nodeId" : "com.fasterxml.jackson.core:jackson-core@2.12.1"
+        }, {
+          "nodeId" : "com.fasterxml.jackson.core:jackson-annotations@2.12.1"
+        }, {
+          "nodeId" : "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider@2.12.1"
+        }, {
+          "nodeId" : "com.github.java-json-tools:json-patch@1.13"
+        } ]
+      }, {
+        "nodeId" : "org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec@2.0.0.Final",
+        "pkgId" : "org.jboss.spec.javax.xml.bind:jboss-jaxb-api_2.3_spec@2.0.0.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-mutiny@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-mutiny@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "io.smallrye.reactive:mutiny@0.14.0"
+        }, {
+          "nodeId" : "io.smallrye.reactive:mutiny-smallrye-context-propagation@0.14.0"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-vertx-core@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-vertx-core@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "io.quarkus:quarkus-netty@1.13.3.Final"
+        }, {
+          "nodeId" : "io.vertx:vertx-core@3.9.6"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-mutiny-reactive-streams-operators@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-mutiny-reactive-streams-operators@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-api@1.0.1"
+        }, {
+          "nodeId" : "org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-core@1.0.1"
+        }, {
+          "nodeId" : "io.smallrye.reactive:mutiny-reactive-streams-operators@0.14.0"
+        } ]
+      }, {
+        "nodeId" : "org.mongodb:mongodb-driver-sync@4.2.3",
+        "pkgId" : "org.mongodb:mongodb-driver-sync@4.2.3",
+        "deps" : [ {
+          "nodeId" : "org.mongodb:bson@4.2.3"
+        }, {
+          "nodeId" : "org.mongodb:mongodb-driver-core@4.2.3"
+        } ]
+      }, {
+        "nodeId" : "org.mongodb:mongodb-driver-reactivestreams@4.2.3",
+        "pkgId" : "org.mongodb:mongodb-driver-reactivestreams@4.2.3",
+        "deps" : [ {
+          "nodeId" : "org.reactivestreams:reactive-streams@1.0.3"
+        }, {
+          "nodeId" : "io.projectreactor:reactor-core@3.2.22.RELEASE"
+        } ]
+      }, {
+        "nodeId" : "org.mongodb:mongodb-crypt@1.2.0",
+        "pkgId" : "org.mongodb:mongodb-crypt@1.2.0",
+        "deps" : [ {
+          "nodeId" : "net.java.dev.jna:jna@5.3.1"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-container-image@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-container-image@1.13.3.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-security-runtime-spi@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-security-runtime-spi@1.13.3.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-vertx-http-dev-console-runtime-spi@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-vertx-http-dev-console-runtime-spi@1.13.3.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.quarkus.security:quarkus-security@1.1.4.Final",
+        "pkgId" : "io.quarkus.security:quarkus-security@1.1.4.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.vertx:vertx-web@3.9.6",
+        "pkgId" : "io.vertx:vertx-web@3.9.6",
+        "deps" : [ {
+          "nodeId" : "io.vertx:vertx-web-common@3.9.6"
+        }, {
+          "nodeId" : "io.vertx:vertx-auth-common@3.9.6"
+        }, {
+          "nodeId" : "io.vertx:vertx-bridge-common@3.9.6"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-resteasy-common@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-resteasy-common@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "com.sun.activation:jakarta.activation@1.2.1"
+        } ]
+      }, {
+        "nodeId" : "jakarta.validation:jakarta.validation-api@2.0.2",
+        "pkgId" : "jakarta.validation:jakarta.validation-api@2.0.2",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "jakarta.annotation:jakarta.annotation-api@1.3.5",
+        "pkgId" : "jakarta.annotation:jakarta.annotation-api@1.3.5",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "jakarta.inject:jakarta.inject-api@1.0",
+        "pkgId" : "jakarta.inject:jakarta.inject-api@1.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-ide-launcher@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-ide-launcher@1.13.3.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-development-mode-spi@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-development-mode-spi@1.13.3.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.smallrye.config:smallrye-config@1.11.1",
+        "pkgId" : "io.smallrye.config:smallrye-config@1.11.1",
+        "deps" : [ {
+          "nodeId" : "io.smallrye.common:smallrye-common-annotation@1.5.0"
+        }, {
+          "nodeId" : "io.smallrye.common:smallrye-common-expression@1.5.0"
+        }, {
+          "nodeId" : "io.smallrye.common:smallrye-common-constraint@1.5.0"
+        }, {
+          "nodeId" : "io.smallrye.common:smallrye-common-classloader@1.5.0"
+        }, {
+          "nodeId" : "io.smallrye.config:smallrye-config-common@1.11.1"
+        } ]
+      }, {
+        "nodeId" : "org.jboss.logging:jboss-logging@3.4.1.Final",
+        "pkgId" : "org.jboss.logging:jboss-logging@3.4.1.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.jboss.logmanager:jboss-logmanager-embedded@1.0.9",
+        "pkgId" : "org.jboss.logmanager:jboss-logmanager-embedded@1.0.9",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.jboss.logging:jboss-logging-annotations@2.2.0.Final",
+        "pkgId" : "org.jboss.logging:jboss-logging-annotations@2.2.0.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.jboss.threads:jboss-threads@3.2.0.Final",
+        "pkgId" : "org.jboss.threads:jboss-threads@3.2.0.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.slf4j:slf4j-api@1.7.30",
+        "pkgId" : "org.slf4j:slf4j-api@1.7.30",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.jboss.slf4j:slf4j-jboss-logmanager@1.1.0.Final",
+        "pkgId" : "org.jboss.slf4j:slf4j-jboss-logmanager@1.1.0.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.graalvm.sdk:graal-sdk@21.0.0",
+        "pkgId" : "org.graalvm.sdk:graal-sdk@21.0.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.wildfly.common:wildfly-common@1.5.4.Final-format-001",
+        "pkgId" : "org.wildfly.common:wildfly-common@1.5.4.Final-format-001",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-bootstrap-runner@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-bootstrap-runner@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "io.smallrye.common:smallrye-common-io@1.5.0"
+        } ]
+      }, {
+        "nodeId" : "io.quarkus.arc:arc@1.13.3.Final",
+        "pkgId" : "io.quarkus.arc:arc@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "jakarta.transaction:jakarta.transaction-api@1.3.3"
+        } ]
+      }, {
+        "nodeId" : "org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api@1.0.1",
+        "pkgId" : "org.eclipse.microprofile.context-propagation:microprofile-context-propagation-api@1.0.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.jboss.resteasy:resteasy-client-api@4.5.9.Final",
+        "pkgId" : "org.jboss.resteasy:resteasy-client-api@4.5.9.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.jboss.resteasy:resteasy-core-spi@4.5.9.Final",
+        "pkgId" : "org.jboss.resteasy:resteasy-core-spi@4.5.9.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.jboss.resteasy:resteasy-core@4.5.9.Final",
+        "pkgId" : "org.jboss.resteasy:resteasy-core@4.5.9.Final",
+        "deps" : [ {
+          "nodeId" : "com.ibm.async:asyncutil@0.1.0"
+        } ]
+      }, {
+        "nodeId" : "org.apache.httpcomponents:httpclient@4.5.13",
+        "pkgId" : "org.apache.httpcomponents:httpclient@4.5.13",
+        "deps" : [ {
+          "nodeId" : "org.apache.httpcomponents:httpcore@4.4.14"
+        } ]
+      }, {
+        "nodeId" : "commons-codec:commons-codec@1.14",
+        "pkgId" : "commons-codec:commons-codec@1.14",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "commons-io:commons-io@2.8.0",
+        "pkgId" : "commons-io:commons-io@2.8.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec@2.0.1.Final",
+        "pkgId" : "org.jboss.spec.javax.ws.rs:jboss-jaxrs-api_2.1_spec@2.0.1.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "commons-logging:commons-logging@1.1.1",
+        "pkgId" : "commons-logging:commons-logging@1.1.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.smallrye:smallrye-context-propagation-api@1.1.0",
+        "pkgId" : "io.smallrye:smallrye-context-propagation-api@1.1.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.smallrye:smallrye-context-propagation-storage@1.1.0",
+        "pkgId" : "io.smallrye:smallrye-context-propagation-storage@1.1.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.eclipse.microprofile.config:microprofile-config-api@1.4",
+        "pkgId" : "org.eclipse.microprofile.config:microprofile-config-api@1.4",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "jakarta.el:jakarta.el-api@3.0.3",
+        "pkgId" : "jakarta.el:jakarta.el-api@3.0.3",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "jakarta.interceptor:jakarta.interceptor-api@1.2.5",
+        "pkgId" : "jakarta.interceptor:jakarta.interceptor-api@1.2.5",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "com.fasterxml.jackson.core:jackson-databind@2.12.1",
+        "pkgId" : "com.fasterxml.jackson.core:jackson-databind@2.12.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "com.fasterxml.jackson.datatype:jackson-datatype-jsr310@2.12.1",
+        "pkgId" : "com.fasterxml.jackson.datatype:jackson-datatype-jsr310@2.12.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "com.fasterxml.jackson.datatype:jackson-datatype-jdk8@2.12.1",
+        "pkgId" : "com.fasterxml.jackson.datatype:jackson-datatype-jdk8@2.12.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "com.fasterxml.jackson.module:jackson-module-parameter-names@2.12.1",
+        "pkgId" : "com.fasterxml.jackson.module:jackson-module-parameter-names@2.12.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.jboss.resteasy:resteasy-jaxb-provider@4.5.9.Final",
+        "pkgId" : "org.jboss.resteasy:resteasy-jaxb-provider@4.5.9.Final",
+        "deps" : [ {
+          "nodeId" : "org.glassfish.jaxb:jaxb-runtime@2.3.3-b02"
+        } ]
+      }, {
+        "nodeId" : "com.fasterxml.jackson.core:jackson-core@2.12.1",
+        "pkgId" : "com.fasterxml.jackson.core:jackson-core@2.12.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "com.fasterxml.jackson.core:jackson-annotations@2.12.1",
+        "pkgId" : "com.fasterxml.jackson.core:jackson-annotations@2.12.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider@2.12.1",
+        "pkgId" : "com.fasterxml.jackson.jaxrs:jackson-jaxrs-json-provider@2.12.1",
+        "deps" : [ {
+          "nodeId" : "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base@2.12.1"
+        }, {
+          "nodeId" : "com.fasterxml.jackson.module:jackson-module-jaxb-annotations@2.12.1"
+        } ]
+      }, {
+        "nodeId" : "com.github.java-json-tools:json-patch@1.13",
+        "pkgId" : "com.github.java-json-tools:json-patch@1.13",
+        "deps" : [ {
+          "nodeId" : "com.github.java-json-tools:msg-simple@1.2"
+        }, {
+          "nodeId" : "com.github.java-json-tools:jackson-coreutils@2.0"
+        } ]
+      }, {
+        "nodeId" : "io.smallrye.reactive:mutiny@0.14.0",
+        "pkgId" : "io.smallrye.reactive:mutiny@0.14.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.smallrye.reactive:mutiny-smallrye-context-propagation@0.14.0",
+        "pkgId" : "io.smallrye.reactive:mutiny-smallrye-context-propagation@0.14.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.quarkus:quarkus-netty@1.13.3.Final",
+        "pkgId" : "io.quarkus:quarkus-netty@1.13.3.Final",
+        "deps" : [ {
+          "nodeId" : "io.netty:netty-codec@4.1.49.Final"
+        }, {
+          "nodeId" : "io.netty:netty-handler@4.1.49.Final"
+        } ]
+      }, {
+        "nodeId" : "io.vertx:vertx-core@3.9.6",
+        "pkgId" : "io.vertx:vertx-core@3.9.6",
+        "deps" : [ {
+          "nodeId" : "io.netty:netty-common@4.1.49.Final"
+        }, {
+          "nodeId" : "io.netty:netty-buffer@4.1.49.Final"
+        }, {
+          "nodeId" : "io.netty:netty-transport@4.1.49.Final"
+        }, {
+          "nodeId" : "io.netty:netty-handler-proxy@4.1.49.Final"
+        }, {
+          "nodeId" : "io.netty:netty-codec-http@4.1.49.Final"
+        }, {
+          "nodeId" : "io.netty:netty-codec-http2@4.1.49.Final"
+        }, {
+          "nodeId" : "io.netty:netty-resolver@4.1.49.Final"
+        }, {
+          "nodeId" : "io.netty:netty-resolver-dns@4.1.49.Final"
+        } ]
+      }, {
+        "nodeId" : "org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-api@1.0.1",
+        "pkgId" : "org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-api@1.0.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-core@1.0.1",
+        "pkgId" : "org.eclipse.microprofile.reactive-streams-operators:microprofile-reactive-streams-operators-core@1.0.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.smallrye.reactive:mutiny-reactive-streams-operators@0.14.0",
+        "pkgId" : "io.smallrye.reactive:mutiny-reactive-streams-operators@0.14.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.mongodb:bson@4.2.3",
+        "pkgId" : "org.mongodb:bson@4.2.3",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.mongodb:mongodb-driver-core@4.2.3",
+        "pkgId" : "org.mongodb:mongodb-driver-core@4.2.3",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.reactivestreams:reactive-streams@1.0.3",
+        "pkgId" : "org.reactivestreams:reactive-streams@1.0.3",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.projectreactor:reactor-core@3.2.22.RELEASE",
+        "pkgId" : "io.projectreactor:reactor-core@3.2.22.RELEASE",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "net.java.dev.jna:jna@5.3.1",
+        "pkgId" : "net.java.dev.jna:jna@5.3.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.vertx:vertx-web-common@3.9.6",
+        "pkgId" : "io.vertx:vertx-web-common@3.9.6",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.vertx:vertx-auth-common@3.9.6",
+        "pkgId" : "io.vertx:vertx-auth-common@3.9.6",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.vertx:vertx-bridge-common@3.9.6",
+        "pkgId" : "io.vertx:vertx-bridge-common@3.9.6",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "com.sun.activation:jakarta.activation@1.2.1",
+        "pkgId" : "com.sun.activation:jakarta.activation@1.2.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.smallrye.common:smallrye-common-annotation@1.5.0",
+        "pkgId" : "io.smallrye.common:smallrye-common-annotation@1.5.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.smallrye.common:smallrye-common-expression@1.5.0",
+        "pkgId" : "io.smallrye.common:smallrye-common-expression@1.5.0",
+        "deps" : [ {
+          "nodeId" : "io.smallrye.common:smallrye-common-function@1.5.0"
+        } ]
+      }, {
+        "nodeId" : "io.smallrye.common:smallrye-common-constraint@1.5.0",
+        "pkgId" : "io.smallrye.common:smallrye-common-constraint@1.5.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.smallrye.common:smallrye-common-classloader@1.5.0",
+        "pkgId" : "io.smallrye.common:smallrye-common-classloader@1.5.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.smallrye.config:smallrye-config-common@1.11.1",
+        "pkgId" : "io.smallrye.config:smallrye-config-common@1.11.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.smallrye.common:smallrye-common-io@1.5.0",
+        "pkgId" : "io.smallrye.common:smallrye-common-io@1.5.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "jakarta.transaction:jakarta.transaction-api@1.3.3",
+        "pkgId" : "jakarta.transaction:jakarta.transaction-api@1.3.3",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "com.ibm.async:asyncutil@0.1.0",
+        "pkgId" : "com.ibm.async:asyncutil@0.1.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.apache.httpcomponents:httpcore@4.4.14",
+        "pkgId" : "org.apache.httpcomponents:httpcore@4.4.14",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.glassfish.jaxb:jaxb-runtime@2.3.3-b02",
+        "pkgId" : "org.glassfish.jaxb:jaxb-runtime@2.3.3-b02",
+        "deps" : [ {
+          "nodeId" : "org.glassfish.jaxb:txw2@2.3.3-b02"
+        }, {
+          "nodeId" : "com.sun.istack:istack-commons-runtime@3.0.10"
+        } ]
+      }, {
+        "nodeId" : "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base@2.12.1",
+        "pkgId" : "com.fasterxml.jackson.jaxrs:jackson-jaxrs-base@2.12.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "com.fasterxml.jackson.module:jackson-module-jaxb-annotations@2.12.1",
+        "pkgId" : "com.fasterxml.jackson.module:jackson-module-jaxb-annotations@2.12.1",
+        "deps" : [ {
+          "nodeId" : "jakarta.activation:jakarta.activation-api@1.2.1"
+        } ]
+      }, {
+        "nodeId" : "com.github.java-json-tools:msg-simple@1.2",
+        "pkgId" : "com.github.java-json-tools:msg-simple@1.2",
+        "deps" : [ {
+          "nodeId" : "com.github.java-json-tools:btf@1.3"
+        } ]
+      }, {
+        "nodeId" : "com.github.java-json-tools:jackson-coreutils@2.0",
+        "pkgId" : "com.github.java-json-tools:jackson-coreutils@2.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.netty:netty-codec@4.1.49.Final",
+        "pkgId" : "io.netty:netty-codec@4.1.49.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.netty:netty-handler@4.1.49.Final",
+        "pkgId" : "io.netty:netty-handler@4.1.49.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.netty:netty-common@4.1.49.Final",
+        "pkgId" : "io.netty:netty-common@4.1.49.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.netty:netty-buffer@4.1.49.Final",
+        "pkgId" : "io.netty:netty-buffer@4.1.49.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.netty:netty-transport@4.1.49.Final",
+        "pkgId" : "io.netty:netty-transport@4.1.49.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.netty:netty-handler-proxy@4.1.49.Final",
+        "pkgId" : "io.netty:netty-handler-proxy@4.1.49.Final",
+        "deps" : [ {
+          "nodeId" : "io.netty:netty-codec-socks@4.1.49.Final"
+        } ]
+      }, {
+        "nodeId" : "io.netty:netty-codec-http@4.1.49.Final",
+        "pkgId" : "io.netty:netty-codec-http@4.1.49.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.netty:netty-codec-http2@4.1.49.Final",
+        "pkgId" : "io.netty:netty-codec-http2@4.1.49.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.netty:netty-resolver@4.1.49.Final",
+        "pkgId" : "io.netty:netty-resolver@4.1.49.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.netty:netty-resolver-dns@4.1.49.Final",
+        "pkgId" : "io.netty:netty-resolver-dns@4.1.49.Final",
+        "deps" : [ {
+          "nodeId" : "io.netty:netty-codec-dns@4.1.49.Final"
+        } ]
+      }, {
+        "nodeId" : "io.smallrye.common:smallrye-common-function@1.5.0",
+        "pkgId" : "io.smallrye.common:smallrye-common-function@1.5.0",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "org.glassfish.jaxb:txw2@2.3.3-b02",
+        "pkgId" : "org.glassfish.jaxb:txw2@2.3.3-b02",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "com.sun.istack:istack-commons-runtime@3.0.10",
+        "pkgId" : "com.sun.istack:istack-commons-runtime@3.0.10",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "jakarta.activation:jakarta.activation-api@1.2.1",
+        "pkgId" : "jakarta.activation:jakarta.activation-api@1.2.1",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "com.github.java-json-tools:btf@1.3",
+        "pkgId" : "com.github.java-json-tools:btf@1.3",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.netty:netty-codec-socks@4.1.49.Final",
+        "pkgId" : "io.netty:netty-codec-socks@4.1.49.Final",
+        "deps" : [ ]
+      }, {
+        "nodeId" : "io.netty:netty-codec-dns@4.1.49.Final",
+        "pkgId" : "io.netty:netty-codec-dns@4.1.49.Final",
+        "deps" : [ ]
+      } ]
+    }
+  }
+}

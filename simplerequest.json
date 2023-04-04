@@ -1,0 +1,76 @@
+{
+  "depGraph": {
+    "schemaVersion": "1.2.0",
+    "pkgManager": {
+      "name": "maven"
+    },
+    "pkgs": [
+      {
+        "id": "org.acme.dbaas:mongodb-quarkus@1.0.0-SNAPSHOT",
+        "info": {
+          "name": "org.acme.dbaas:mongodb-quarkus",
+          "version": "1.0.0-SNAPSHOT"
+        }
+      },
+      {
+        "id": "org.keycloak:keycloak-saml-core@1.8.1.Final",
+        "info": {
+          "name": "org.keycloak:keycloak-saml-core",
+          "version": "1.8.1.Final"
+        }
+      },
+      {
+        "id": "org.apache.santuario:xmlsec@1.5.1",
+        "info": {
+          "name": "org.apache.santuario:xmlsec",
+          "version": "1.5.1"
+        }
+      },
+      {
+        "id": "commons-logging:commons-logging@1.1.1",
+        "info": {
+          "name": "commons-logging:commons-logging",
+          "version": "1.1.1"
+        }
+      }
+    ],
+    "graph": {
+      "rootNodeId": "org.acme.dbaas:mongodb-quarkus@1.0.0-SNAPSHOT",
+      "nodes": [
+        {
+          "nodeId": "org.acme.dbaas:mongodb-quarkus@1.0.0-SNAPSHOT",
+          "pkgId": "org.acme.dbaas:mongodb-quarkus@1.0.0-SNAPSHOT",
+          "deps": [
+            {
+              "nodeId": "org.keycloak:keycloak-saml-core@1.8.1.Final"
+            }
+          ]
+        },
+        {
+          "nodeId": "org.keycloak:keycloak-saml-core@1.8.1.Final",
+          "pkgId": "org.keycloak:keycloak-saml-core@1.8.1.Final",
+          "deps": [
+            {
+              "nodeId": "org.apache.santuario:xmlsec@1.5.1"
+            }
+          ]
+        },
+        {
+          "nodeId": "org.apache.santuario:xmlsec@1.5.1",
+          "pkgId": "org.apache.santuario:xmlsec@1.5.1",
+          "deps": [
+            {
+              "nodeId": "commons-logging:commons-logging@1.1.1"
+            }
+          ]
+        },
+        {
+          "nodeId": "commons-logging:commons-logging@1.1.1",
+          "pkgId": "commons-logging:commons-logging@1.1.1",
+          "deps": [
+          ]
+        }
+      ]
+    }
+  }
+}

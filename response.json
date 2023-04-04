@@ -1,0 +1,3270 @@
+{
+  "ok": false,
+  "packageManager": "maven",
+  "issuesData": {
+    "SNYK-JAVA-COMFASTERXMLJACKSONCORE-2326698": {
+      "id": "SNYK-JAVA-COMFASTERXMLJACKSONCORE-2326698",
+      "title": "Denial of Service (DoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[2.13.0,2.13.1)",
+          "[2.10.0.pr1,2.12.6)"
+        ]
+      },
+      "fixedIn": [
+        "2.13.1",
+        "2.12.6"
+      ],
+      "insights": {
+        "triageAdvice": "This vulnerability is only applicable when JDK serialization (\"ObjectInputStream\" or \"ObjectOutputStream\", as opposed to Jackson serialization) is in use."
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.9,
+      "moduleName": "com.fasterxml.jackson.core:jackson-databind",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2023-03-24T01:10:05.274817Z"
+        }
+      ],
+      "description": "## Overview\n[com.fasterxml.jackson.core:jackson-databind](https://github.com/FasterXML/jackson-databind) is a library which contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor.\nAffected versions of this package are vulnerable to Denial of Service (DoS) when using JDK serialization to serialize and deserialize `JsonNode` values.\r\nIt is possible for the attacker to send a 4-byte length payload, with a value of `Integer.MAX_VALUE` , that will eventually cause large buffer allocation and out of heap memory.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `com.fasterxml.jackson.core:jackson-databind` to version 2.13.1, 2.12.6 or higher.\n## References\n- [GitHub Commit](https://github.com/FasterXML/jackson-databind/commit/3ccde7d938fea547e598fdefe9a82cff37fed5cb)\n- [GitHub Issue](https://github.com/FasterXML/jackson-databind/issues/3328)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-46877"
+        ],
+        "CWE": [
+          "CWE-400"
+        ]
+      },
+      "packageName": "com.fasterxml.jackson.core:jackson-databind",
+      "proprietary": false,
+      "disclosureTime": "2021-12-25T19:19:59Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "com.fasterxml.jackson.core",
+        "artifactId": "jackson-databind"
+      }
+    },
+    "SNYK-JAVA-COMFASTERXMLJACKSONCORE-2421244": {
+      "id": "SNYK-JAVA-COMFASTERXMLJACKSONCORE-2421244",
+      "title": "Denial of Service (DoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[, 2.12.6.1)",
+          "[2.13.0, 2.13.2.1)",
+          "[2.14.0-rc1, 2.14.0)"
+        ]
+      },
+      "fixedIn": [
+        "2.12.6.1",
+        "2.13.2.1",
+        "2.14.0"
+      ],
+      "insights": {
+        "triageAdvice": "This vulnerability is only applicable when using nested objects."
+      },
+      "language": "java",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "moduleName": "com.fasterxml.jackson.core:jackson-databind",
+      "cvssDetails": [
+        {
+          "assigner": "SUSE",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-05-17T11:03:02.563730Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-11-16T13:59:00.718211Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-11-28T01:11:01.474559Z"
+        }
+      ],
+      "description": "## Overview\n[com.fasterxml.jackson.core:jackson-databind](https://github.com/FasterXML/jackson-databind) is a library which contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor.\nAffected versions of this package are vulnerable to Denial of Service (DoS) via a large depth of nested objects.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `com.fasterxml.jackson.core:jackson-databind` to version 2.12.6.1, 2.13.2.1, 2.14.0 or higher.\n## References\n- [GitHub Commit](https://github.com/FasterXML/jackson-databind/commit/fcfc4998ec23f0b1f7f8a9521c2b317b6c25892b)\n- [GitHub Issue](https://github.com/FasterXML/jackson-databind/issues/2816)\n- [GitHub PR](https://github.com/FasterXML/jackson-databind/pull/3416)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2020-36518"
+        ],
+        "CWE": [
+          "CWE-400"
+        ]
+      },
+      "packageName": "com.fasterxml.jackson.core:jackson-databind",
+      "proprietary": false,
+      "disclosureTime": "2022-03-11T13:18:25Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "com.fasterxml.jackson.core",
+        "artifactId": "jackson-databind"
+      }
+    },
+    "SNYK-JAVA-COMFASTERXMLJACKSONCORE-3038424": {
+      "id": "SNYK-JAVA-COMFASTERXMLJACKSONCORE-3038424",
+      "title": "Denial of Service (DoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.13.4)"
+        ]
+      },
+      "fixedIn": [
+        "2.13.4"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.9,
+      "moduleName": "com.fasterxml.jackson.core:jackson-databind",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-11-28T01:11:01.403251Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-11-16T14:46:14.917765Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-11-17T11:03:57.683000Z"
+        }
+      ],
+      "description": "## Overview\n[com.fasterxml.jackson.core:jackson-databind](https://github.com/FasterXML/jackson-databind) is a library which contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor.\nAffected versions of this package are vulnerable to Denial of Service (DoS) in the `_deserializeFromArray()` function in `BeanDeserializer`, due to resource exhaustion when processing a deeply nested array.\r\n\r\n**NOTE:**\r\nFor this vulnerability to be exploitable the non-default `DeserializationFeature` must be enabled.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `com.fasterxml.jackson.core:jackson-databind` to version 2.13.4 or higher.\n## References\n- [Chromium Bugs](https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=50490)\n- [GitHub Commit](https://github.com/FasterXML/jackson-databind/commit/063183589218fec19a9293ed2f17ec53ea80ba88)\n- [GitHub Issue](https://github.com/FasterXML/jackson-databind/issues/3582)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-42004"
+        ],
+        "CWE": [
+          "CWE-400"
+        ]
+      },
+      "packageName": "com.fasterxml.jackson.core:jackson-databind",
+      "proprietary": false,
+      "disclosureTime": "2022-10-02T09:07:28Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "com.fasterxml.jackson.core",
+        "artifactId": "jackson-databind"
+      }
+    },
+    "SNYK-JAVA-COMFASTERXMLJACKSONCORE-3038426": {
+      "id": "SNYK-JAVA-COMFASTERXMLJACKSONCORE-3038426",
+      "title": "Denial of Service (DoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:N/A:H/E:P",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.12.7.1)",
+          "[2.13.0,2.13.4.2)"
+        ]
+      },
+      "fixedIn": [
+        "2.12.7.1",
+        "2.13.4.2"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.9,
+      "moduleName": "com.fasterxml.jackson.core:jackson-databind",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-11-28T01:11:01.289734Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-11-16T14:46:05.108575Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-11-17T11:03:47.295722Z"
+        }
+      ],
+      "description": "## Overview\n[com.fasterxml.jackson.core:jackson-databind](https://github.com/FasterXML/jackson-databind) is a library which contains the general-purpose data-binding functionality and tree-model for Jackson Data Processor.\nAffected versions of this package are vulnerable to Denial of Service (DoS) in the `_deserializeWrappedValue()` function in `StdDeserializer.java`, due to resource exhaustion when processing deeply nested arrays.\r\n\r\n**NOTE:** This vulnerability is only exploitable when the non-default `UNWRAP_SINGLE_VALUE_ARRAYS` feature is enabled.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `com.fasterxml.jackson.core:jackson-databind` to version 2.12.7.1, 2.13.4.2 or higher.\n## References\n- [Chromium Bugs](https://bugs.chromium.org/p/oss-fuzz/issues/detail?id=51020)\n- [Documentation](https://fasterxml.github.io/jackson-databind/javadoc/2.9/com/fasterxml/jackson/databind/DeserializationFeature.html#UNWRAP_SINGLE_VALUE_ARRAYS)\n- [GitHub Commit](https://github.com/FasterXML/jackson-databind/commit/cd090979b7ea78c75e4de8a4aed04f7e9fa8deea)\n- [GitHub Commit](https://github.com/FasterXML/jackson-databind/commit/d78d00ee7b5245b93103fef3187f70543d67ca33)\n- [GitHub Issue](https://github.com/FasterXML/jackson-databind/issues/3590)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-42003"
+        ],
+        "CWE": [
+          "CWE-400"
+        ]
+      },
+      "packageName": "com.fasterxml.jackson.core:jackson-databind",
+      "proprietary": false,
+      "disclosureTime": "2022-10-02T09:22:10Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "com.fasterxml.jackson.core",
+        "artifactId": "jackson-databind"
+      }
+    },
+    "SNYK-JAVA-IONETTY-1020439": {
+      "id": "SNYK-JAVA-IONETTY-1020439",
+      "title": "Denial of Service (DoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[0,4.1.53.Final)"
+        ]
+      },
+      "fixedIn": [
+        "4.1.53.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 6.5,
+      "moduleName": "io.netty:netty-codec-http",
+      "cvssDetails": [],
+      "description": "## Overview\n[io.netty:netty-codec-http](https://mvnrepository.com/artifact/io.netty/netty-codec-http) is a network application framework for rapid development of maintainable high performance protocol servers & clients.\nAffected versions of this package are vulnerable to Denial of Service (DoS). When the post request body data received by the server is greater than 16k, netty will use `DiskAttribute`, which will create a temporary file, and use `deleteOnExit()` when the file needs to be deleted, which results in `DeleteOnExitHook.files` continually growing and leading to a denial of service.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `io.netty:netty-codec-http` to version 4.1.53.Final or higher.\n## References\n- [GitHub PR](https://github.com/netty/netty/pull/10560)\n",
+      "identifiers": {
+        "CVE": [],
+        "CWE": [
+          "CWE-400"
+        ]
+      },
+      "packageName": "io.netty:netty-codec-http",
+      "proprietary": false,
+      "disclosureTime": "2020-09-10T04:09:03Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.netty",
+        "artifactId": "netty-codec-http"
+      }
+    },
+    "SNYK-JAVA-IONETTY-1042268": {
+      "id": "SNYK-JAVA-IONETTY-1042268",
+      "title": "Improper Certificate Validation",
+      "CVSSv3": "CVSS:3.1/AV:A/AC:H/PR:L/UI:R/S:U/C:H/I:L/A:L/E:U/RL:U/RC:R",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[4.1.0.Final,]"
+        ]
+      },
+      "fixedIn": [],
+      "insights": {
+        "triageAdvice": "This vulnerability is only applicable when certificate hostname validation is disabled."
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.6,
+      "moduleName": "io.netty:netty-handler",
+      "cvssDetails": [],
+      "description": "## Overview\n[io.netty:netty-handler](https://github.com/netty/netty.git/netty-handler) is a library that provides an asynchronous event-driven network application framework and tools for rapid development of maintainable high performance and high scalability protocol servers and clients. In other words, Netty is a NIO client server framework which enables quick and easy development of network applications such as protocol servers and clients. It greatly simplifies and streamlines network programming such as TCP and UDP socket server.\nAffected versions of this package are vulnerable to Improper Certificate Validation. Certificate hostname validation is disabled by default in `Netty 4.1.x` which makes it potentially susceptible to Man-in-the-Middle attacks.\n## Remediation\nThere is no fixed version for `io.netty:netty-handler`.\n## References\n- [GitHub Issue 1](https://github.com/netty/netty/issues/10806)\n- [GitHub Issue 2](https://github.com/netty/netty/issues/8537)\n- [GitHub Issue 3](https://github.com/netty/netty/issues/9930)\n- [GitHub Issue 4](https://github.com/netty/netty/issues/10362)\n",
+      "identifiers": {
+        "CVE": [],
+        "CWE": [
+          "CWE-295"
+        ]
+      },
+      "packageName": "io.netty:netty-handler",
+      "proprietary": false,
+      "disclosureTime": "2020-11-19T07:07:57Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.netty",
+        "artifactId": "netty-handler"
+      }
+    },
+    "SNYK-JAVA-IONETTY-1070799": {
+      "id": "SNYK-JAVA-IONETTY-1070799",
+      "title": "Information Disclosure",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "credit": [
+        "Jonathan Leitschuh"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[4.0.0.Final, 4.1.59.Final)"
+        ]
+      },
+      "fixedIn": [
+        "4.1.59.Final"
+      ],
+      "insights": {
+        "triageAdvice": "This vulnerability is only applicable on Linux operating systems"
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 6.2,
+      "moduleName": "io.netty:netty-codec-http",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.2,
+          "modificationTime": "2023-03-26T14:47:50.011213Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 5.5,
+          "modificationTime": "2022-05-13T01:10:58.276413Z"
+        }
+      ],
+      "description": "## Overview\n[io.netty:netty-codec-http](https://mvnrepository.com/artifact/io.netty/netty-codec-http) is a network application framework for rapid development of maintainable high performance protocol servers & clients.\nAffected versions of this package are vulnerable to Information Disclosure via the `AbstractDiskHttpData` method, and on Unix-like systems.\r\n\r\nWhen `netty`'s multipart decoders are used, local information disclosure can occur via the local system temporary directory if temporary storing uploads on the disk are enabled.\r\nOn unix-like systems, the temporary directory is shared between all users. As such, writing to this directory using API's that do not explicitly set the file/directory permissions can lead to information disclosure.\r\nThe method `File.createTempFile` on unix-like systems creates a random file, but, by default will create this file with the permissions `-rw-r--r--`. Sensitive information is written to this file in `AbstractDiskHttpData`, and other local users can read it.\n## Remediation\nUpgrade `io.netty:netty-codec-http` to version 4.1.59.Final or higher.\n## References\n- [GitHub Commit](https://github.com/netty/netty/commit/c735357bf29d07856ad171c6611a2e1a0e0000ec)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-21290"
+        ],
+        "CWE": [
+          "CWE-378"
+        ],
+        "GHSA": [
+          "GHSA-5mcr-gq6c-3hq2"
+        ]
+      },
+      "packageName": "io.netty:netty-codec-http",
+      "proprietary": false,
+      "disclosureTime": "2021-02-09T09:57:33Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.netty",
+        "artifactId": "netty-codec-http"
+      }
+    },
+    "SNYK-JAVA-IONETTY-1082234": {
+      "id": "SNYK-JAVA-IONETTY-1082234",
+      "title": "Information Disclosure",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "credit": [
+        "Jonathan Leitschuh"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[4.0.0.Final, 4.1.59.Final)"
+        ]
+      },
+      "fixedIn": [
+        "4.1.59.Final"
+      ],
+      "insights": {
+        "triageAdvice": "This vulnerability is only applicable on Linux operating systems"
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 6.2,
+      "moduleName": "io.netty:netty-common",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.2,
+          "modificationTime": "2023-03-26T14:47:50.011213Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 5.5,
+          "modificationTime": "2022-05-13T01:10:58.276413Z"
+        }
+      ],
+      "description": "## Overview\nAffected versions of this package are vulnerable to Information Disclosure via the `AbstractDiskHttpData` method, and on Unix-like systems.\r\n\r\nWhen `netty`'s multipart decoders are used, local information disclosure can occur via the local system temporary directory if temporary storing uploads on the disk are enabled.\r\nOn unix-like systems, the temporary directory is shared between all users. As such, writing to this directory using API's that do not explicitly set the file/directory permissions can lead to information disclosure.\r\nThe method `File.createTempFile` on unix-like systems creates a random file, but, by default will create this file with the permissions `-rw-r--r--`. Sensitive information is written to this file in `AbstractDiskHttpData`, and other local users can read it.\n## Remediation\nUpgrade `io.netty:netty-common` to version 4.1.59.Final or higher.\n## References\n- [GitHub Commit](https://github.com/netty/netty/commit/c735357bf29d07856ad171c6611a2e1a0e0000ec)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-21290"
+        ],
+        "CWE": [
+          "CWE-378"
+        ],
+        "GHSA": [
+          "GHSA-5mcr-gq6c-3hq2"
+        ]
+      },
+      "packageName": "io.netty:netty-common",
+      "proprietary": false,
+      "disclosureTime": "2021-02-09T09:57:33Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.netty",
+        "artifactId": "netty-common"
+      }
+    },
+    "SNYK-JAVA-IONETTY-1082235": {
+      "id": "SNYK-JAVA-IONETTY-1082235",
+      "title": "Information Disclosure",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "credit": [
+        "Jonathan Leitschuh"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[4.0.0.Final, 4.1.59.Final)"
+        ]
+      },
+      "fixedIn": [
+        "4.1.59.Final"
+      ],
+      "insights": {
+        "triageAdvice": "This vulnerability is only applicable on Linux operating systems"
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 6.2,
+      "moduleName": "io.netty:netty-handler",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.2,
+          "modificationTime": "2023-03-26T14:47:50.011213Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 5.5,
+          "modificationTime": "2022-05-13T01:10:58.276413Z"
+        }
+      ],
+      "description": "## Overview\n[io.netty:netty-handler](https://github.com/netty/netty.git/netty-handler) is a library that provides an asynchronous event-driven network application framework and tools for rapid development of maintainable high performance and high scalability protocol servers and clients. In other words, Netty is a NIO client server framework which enables quick and easy development of network applications such as protocol servers and clients. It greatly simplifies and streamlines network programming such as TCP and UDP socket server.\nAffected versions of this package are vulnerable to Information Disclosure via the `AbstractDiskHttpData` method, and on Unix-like systems.\r\n\r\nWhen `netty`'s multipart decoders are used, local information disclosure can occur via the local system temporary directory if temporary storing uploads on the disk are enabled.\r\nOn unix-like systems, the temporary directory is shared between all users. As such, writing to this directory using API's that do not explicitly set the file/directory permissions can lead to information disclosure.\r\nThe method `File.createTempFile` on unix-like systems creates a random file, but, by default will create this file with the permissions `-rw-r--r--`. Sensitive information is written to this file in `AbstractDiskHttpData`, and other local users can read it.\n## Remediation\nUpgrade `io.netty:netty-handler` to version 4.1.59.Final or higher.\n## References\n- [GitHub Commit](https://github.com/netty/netty/commit/c735357bf29d07856ad171c6611a2e1a0e0000ec)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-21290"
+        ],
+        "CWE": [
+          "CWE-378"
+        ],
+        "GHSA": [
+          "GHSA-5mcr-gq6c-3hq2"
+        ]
+      },
+      "packageName": "io.netty:netty-handler",
+      "proprietary": false,
+      "disclosureTime": "2021-02-09T09:57:33Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.netty",
+        "artifactId": "netty-handler"
+      }
+    },
+    "SNYK-JAVA-IONETTY-1082236": {
+      "id": "SNYK-JAVA-IONETTY-1082236",
+      "title": "Information Disclosure",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+      "credit": [
+        "Jonathan Leitschuh"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[4.0.0.Final, 4.1.59.Final)"
+        ]
+      },
+      "fixedIn": [
+        "4.1.59.Final"
+      ],
+      "insights": {
+        "triageAdvice": "This vulnerability is only applicable on Linux operating systems"
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 6.2,
+      "moduleName": "io.netty:netty-transport",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.2,
+          "modificationTime": "2023-03-26T14:47:50.011213Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 5.5,
+          "modificationTime": "2022-05-13T01:10:58.276413Z"
+        }
+      ],
+      "description": "## Overview\nAffected versions of this package are vulnerable to Information Disclosure via the `AbstractDiskHttpData` method, and on Unix-like systems.\r\n\r\nWhen `netty`'s multipart decoders are used, local information disclosure can occur via the local system temporary directory if temporary storing uploads on the disk are enabled.\r\nOn unix-like systems, the temporary directory is shared between all users. As such, writing to this directory using API's that do not explicitly set the file/directory permissions can lead to information disclosure.\r\nThe method `File.createTempFile` on unix-like systems creates a random file, but, by default will create this file with the permissions `-rw-r--r--`. Sensitive information is written to this file in `AbstractDiskHttpData`, and other local users can read it.\n## Remediation\nUpgrade `io.netty:netty-transport` to version 4.1.59.Final or higher.\n## References\n- [GitHub Commit](https://github.com/netty/netty/commit/c735357bf29d07856ad171c6611a2e1a0e0000ec)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-21290"
+        ],
+        "CWE": [
+          "CWE-378"
+        ],
+        "GHSA": [
+          "GHSA-5mcr-gq6c-3hq2"
+        ]
+      },
+      "packageName": "io.netty:netty-transport",
+      "proprietary": false,
+      "disclosureTime": "2021-02-09T09:57:33Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.netty",
+        "artifactId": "netty-transport"
+      }
+    },
+    "SNYK-JAVA-IONETTY-1083991": {
+      "id": "SNYK-JAVA-IONETTY-1083991",
+      "title": "HTTP Request Smuggling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N/E:H",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,4.1.60.Final)"
+        ]
+      },
+      "fixedIn": [
+        "4.1.60.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.9,
+      "moduleName": "io.netty:netty-codec-http2",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "cvssV3BaseScore": 5.9,
+          "modificationTime": "2023-03-26T14:47:50.056113Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "cvssV3BaseScore": 5.9,
+          "modificationTime": "2022-05-13T01:11:04.008136Z"
+        }
+      ],
+      "description": "## Overview\n[io.netty:netty-codec-http2](http://netty.io/) is a HTTP2 sub package for the netty library, an event-driven asynchronous network application framework.\nAffected versions of this package are vulnerable to HTTP Request Smuggling. If a Content-Length header is present in the original HTTP/2 request, the field is not validated by `Http2MultiplexHandler` as it is propagated up.\r\n\r\nAn additional case of this vulnerability was fixed in 4.1.61.Final (CVE-2021-21409).\n## Remediation\nUpgrade `io.netty:netty-codec-http2` to version 4.1.60.Final or higher.\n## References\n- [GitHub Commit](https://github.com/netty/netty/commit/89c241e3b1795ff257af4ad6eadc616cb2fb3dc4)\n- [GitHub PR](https://github.com/Netflix/zuul/pull/980)\n- [HTTP/2: The Sequel is Always Worse](https://portswigger.net/research/http2)\n- [HTTP Request Smuggling Burp App](https://github.com/PortSwigger/http-request-smuggler)\n- [HTTP Request Smuggling Demystified - Snyk Blog](https://snyk.io/blog/demystifying-http-request-smuggling/)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-21295"
+        ],
+        "CWE": [
+          "CWE-444"
+        ],
+        "GHSA": [
+          "GHSA-wm47-8v5p-wjpj"
+        ]
+      },
+      "packageName": "io.netty:netty-codec-http2",
+      "proprietary": false,
+      "disclosureTime": "2021-03-10T08:58:43Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.netty",
+        "artifactId": "netty-codec-http2"
+      }
+    },
+    "SNYK-JAVA-IONETTY-1089809": {
+      "id": "SNYK-JAVA-IONETTY-1089809",
+      "title": "HTTP Request Smuggling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,4.1.61.Final)"
+        ]
+      },
+      "fixedIn": [
+        "4.1.61.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.9,
+      "moduleName": "io.netty:netty-codec-http2",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "cvssV3BaseScore": 5.9,
+          "modificationTime": "2023-03-26T14:47:50.099053Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "cvssV3BaseScore": 5.9,
+          "modificationTime": "2022-05-13T01:10:59.025176Z"
+        }
+      ],
+      "description": "## Overview\n[io.netty:netty-codec-http2](http://netty.io/) is a HTTP2 sub package for the netty library, an event-driven asynchronous network application framework.\nAffected versions of this package are vulnerable to HTTP Request Smuggling. The content-length header is not correctly validated if the request only uses a single `Http2HeaderFrame` with the `endStream` set to `true`. This could lead to request smuggling if the request is proxied to a remote peer and translated to `HTTP/1.1`.\r\nThis is a follow-up of [CVE-2021-21295](https://snyk.io/vuln/SNYK-JAVA-IONETTY-1083991) which did not fix this specific case.\n## Remediation\nUpgrade `io.netty:netty-codec-http2` to version 4.1.61.Final or higher.\n## References\n- [GitHub Commit](https://github.com/netty/netty/commit/b0fa4d5aab4215f3c22ce6123dd8dd5f38dc0432)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=1944888)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-21409"
+        ],
+        "CWE": [
+          "CWE-444"
+        ],
+        "GHSA": [
+          "GHSA-f256-j965-7f32"
+        ]
+      },
+      "packageName": "io.netty:netty-codec-http2",
+      "proprietary": false,
+      "disclosureTime": "2021-03-31T07:35:21Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.netty",
+        "artifactId": "netty-codec-http2"
+      }
+    },
+    "SNYK-JAVA-IONETTY-1317097": {
+      "id": "SNYK-JAVA-IONETTY-1317097",
+      "title": "HTTP Request Smuggling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N/E:H",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,4.1.60.Final)"
+        ]
+      },
+      "fixedIn": [
+        "4.1.60.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.9,
+      "moduleName": "io.netty:netty-codec-http",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "cvssV3BaseScore": 5.9,
+          "modificationTime": "2023-03-26T14:47:50.056113Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:H/A:N",
+          "cvssV3BaseScore": 5.9,
+          "modificationTime": "2022-05-13T01:11:04.008136Z"
+        }
+      ],
+      "description": "## Overview\n[io.netty:netty-codec-http](https://mvnrepository.com/artifact/io.netty/netty-codec-http) is a network application framework for rapid development of maintainable high performance protocol servers & clients.\nAffected versions of this package are vulnerable to HTTP Request Smuggling. If a Content-Length header is present in the original HTTP/2 request, the field is not validated by `Http2MultiplexHandler` as it is propagated up.\r\n\r\nAn additional case of this vulnerability was fixed in 4.1.61.Final (CVE-2021-21409).\n## Remediation\nUpgrade `io.netty:netty-codec-http` to version 4.1.60.Final or higher.\n## References\n- [GitHub Commit](https://github.com/netty/netty/commit/89c241e3b1795ff257af4ad6eadc616cb2fb3dc4)\n- [GitHub PR](https://github.com/Netflix/zuul/pull/980)\n- [HTTP/2: The Sequel is Always Worse](https://portswigger.net/research/http2)\n- [HTTP Request Smuggling Burp App](https://github.com/PortSwigger/http-request-smuggler)\n- [HTTP Request Smuggling Demystified - Snyk Blog](https://snyk.io/blog/demystifying-http-request-smuggling/)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-21295"
+        ],
+        "CWE": [
+          "CWE-444"
+        ],
+        "GHSA": [
+          "GHSA-wm47-8v5p-wjpj"
+        ]
+      },
+      "packageName": "io.netty:netty-codec-http",
+      "proprietary": false,
+      "disclosureTime": "2021-03-10T08:58:43Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.netty",
+        "artifactId": "netty-codec-http"
+      }
+    },
+    "SNYK-JAVA-IONETTY-1584063": {
+      "id": "SNYK-JAVA-IONETTY-1584063",
+      "title": "Denial of Service (DoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "Ori Hollander of JFrog Security"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,4.1.68.Final)"
+        ]
+      },
+      "fixedIn": [
+        "4.1.68.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "moduleName": "io.netty:netty-codec",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2023-03-26T14:47:13.542762Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-10-06T01:10:27.836641Z"
+        }
+      ],
+      "description": "## Overview\n[io.netty:netty-codec](https://github.com/netty/netty) is an event-driven asynchronous network application framework.\nAffected versions of this package are vulnerable to Denial of Service (DoS). `SnappyFrameDecoder` doesn't restrict chunk length any mad buffer skippable chunks in an unnecessary way, leading to excessive memory usage. This vulnerability can be triggered by supplying malicious input that decompresses to a very big size (via a network stream or a file), or by sending a huge skippable chunk.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `io.netty:netty-codec` to version 4.1.68.Final or higher.\n## References\n- [GitHub Commit](https://github.com/netty/netty/commit/6da4956b31023ae967451e1d94ff51a746a9194f)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-37137"
+        ],
+        "CWE": [
+          "CWE-400"
+        ],
+        "GHSA": [
+          "GHSA-9vjp-v76f-g363"
+        ]
+      },
+      "packageName": "io.netty:netty-codec",
+      "proprietary": false,
+      "disclosureTime": "2021-09-09T17:11:31Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.netty",
+        "artifactId": "netty-codec"
+      }
+    },
+    "SNYK-JAVA-IONETTY-1584064": {
+      "id": "SNYK-JAVA-IONETTY-1584064",
+      "title": "Denial of Service (DoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "Ori Hollander of JFrog Security"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,4.1.68.Final)"
+        ]
+      },
+      "fixedIn": [
+        "4.1.68.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "moduleName": "io.netty:netty-codec",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2023-03-26T14:47:15.072515Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-10-06T01:10:22.126234Z"
+        }
+      ],
+      "description": "## Overview\n[io.netty:netty-codec](https://github.com/netty/netty) is an event-driven asynchronous network application framework.\nAffected versions of this package are vulnerable to Denial of Service (DoS). `Bzip2Decoder` doesn't allow setting size restrictions for decompressed data. An attacker can exploit this by providing a compressed file that, when decompressed, triggers an out-of-memory exception.\n\n## Details\n\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\n\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\n\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\n\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\n\nTwo common types of DoS vulnerabilities:\n\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\n\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](https://snyk.io/vuln/npm:ws:20171108)\n\n## Remediation\nUpgrade `io.netty:netty-codec` to version 4.1.68.Final or higher.\n## References\n- [GitHub Commit](https://github.com/netty/netty/commit/41d3d61a61608f2223bb364955ab2045dd5e4020)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-37136"
+        ],
+        "CWE": [
+          "CWE-400"
+        ],
+        "GHSA": [
+          "GHSA-grg4-wf29-r9vv"
+        ]
+      },
+      "packageName": "io.netty:netty-codec",
+      "proprietary": false,
+      "disclosureTime": "2021-09-09T17:11:21Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.netty",
+        "artifactId": "netty-codec"
+      }
+    },
+    "SNYK-JAVA-IONETTY-2314893": {
+      "id": "SNYK-JAVA-IONETTY-2314893",
+      "title": "HTTP Request Smuggling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,4.1.71.Final)"
+        ]
+      },
+      "fixedIn": [
+        "4.1.71.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 6.5,
+      "moduleName": "io.netty:netty-codec-http",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+          "cvssV3BaseScore": 6.5,
+          "modificationTime": "2023-03-26T14:47:19.779868Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "cvssV3BaseScore": 6.1,
+          "modificationTime": "2022-06-14T11:01:56.955647Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:H/A:N",
+          "cvssV3BaseScore": 6.5,
+          "modificationTime": "2022-07-26T01:11:20.554408Z"
+        }
+      ],
+      "description": "## Overview\n[io.netty:netty-codec-http](https://mvnrepository.com/artifact/io.netty/netty-codec-http) is a network application framework for rapid development of maintainable high performance protocol servers & clients.\nAffected versions of this package are vulnerable to HTTP Request Smuggling. Netty currently just skips control characters when these are present at the beginning or end of the header name. It should instead fail fast as these are not allowed by the spec and could lead to HTTP request smuggling. Failing to do the validation might cause netty to \"sanitize\" header names before it forward these to another remote system when used as proxy. This remote system can't see the invalid usage anymore, and therefore does not do the validation itself.\n## Remediation\nUpgrade `io.netty:netty-codec-http` to version 4.1.71.Final or higher.\n## References\n- [GitHub Commit](https://github.com/netty/netty/commit/07aa6b5938a8b6ed7a6586e066400e2643897323)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-43797"
+        ],
+        "CWE": [
+          "CWE-444"
+        ],
+        "GHSA": [
+          "GHSA-wx5j-54mm-rqqq"
+        ]
+      },
+      "packageName": "io.netty:netty-codec-http",
+      "proprietary": false,
+      "disclosureTime": "2021-12-09T19:09:17Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.netty",
+        "artifactId": "netty-codec-http"
+      }
+    },
+    "SNYK-JAVA-IONETTY-2812456": {
+      "id": "SNYK-JAVA-IONETTY-2812456",
+      "title": "Information Exposure",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+      "credit": [
+        "Jonathan Leitschuh"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[4.0.0.Final,4.1.77.Final)"
+        ]
+      },
+      "fixedIn": [
+        "4.1.77.Final"
+      ],
+      "insights": {
+        "triageAdvice": "This vulnerability is only applicable on systems using Java 6 and below"
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.5,
+      "moduleName": "io.netty:netty-common",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 5.5,
+          "modificationTime": "2023-03-26T14:47:36.698315Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 5.5,
+          "modificationTime": "2022-07-26T01:11:23.763614Z"
+        }
+      ],
+      "description": "## Overview\nAffected versions of this package are vulnerable to Information Exposure due to an incomplete fix to [CVE-2021-21290](https://security.snyk.io/vuln/SNYK-JAVA-IONETTY-1082234), which still allowed one exploitable path.\r\nWhen netty's multipart decoders are used, local information disclosure can occur via the local system temporary directory, if temporary storing uploads on the disk is enabled.\r\n**Note:** To be vulnerable, a victim application has to run on a Unix-like operating system, and with Java 6 or below.\n## Remediation\nUpgrade `io.netty:netty-common` to version 4.1.77.Final or higher.\n## References\n- [GitHub Commit](https://github.com/netty/netty/commit/185f8b2756a36aaa4f973f1a2a025e7d981823f1)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-24823"
+        ],
+        "CWE": [
+          "CWE-200",
+          "CWE-378"
+        ],
+        "GHSA": [
+          "GHSA-269q-hmxg-m83q"
+        ]
+      },
+      "packageName": "io.netty:netty-common",
+      "proprietary": false,
+      "disclosureTime": "2022-05-08T10:55:12Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.netty",
+        "artifactId": "netty-common"
+      }
+    },
+    "SNYK-JAVA-IOQUARKUS-2331899": {
+      "id": "SNYK-JAVA-IOQUARKUS-2331899",
+      "title": "Information Exposure",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+      "credit": [
+        "Loïc Mathieu"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[0, 2.6.0.CR1)"
+        ]
+      },
+      "fixedIn": [
+        "2.6.0.CR1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "io.quarkus:quarkus-core",
+      "cvssDetails": [],
+      "description": "## Overview\nAffected versions of this package are vulnerable to Information Exposure via the OpenAPI header info text which discloses the version of `quarkus`.\n## Remediation\nUpgrade `io.quarkus:quarkus-core` to version 2.6.0.CR1 or higher.\n## References\n- [GitHub Issue](https://github.com/quarkusio/quarkus/issues/21221)\n- [GitHub PR](https://github.com/quarkusio/quarkus/pull/21686)\n",
+      "identifiers": {
+        "CVE": [],
+        "CWE": [
+          "CWE-200"
+        ]
+      },
+      "packageName": "io.quarkus:quarkus-core",
+      "proprietary": false,
+      "disclosureTime": "2021-11-05T10:37:05Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.quarkus",
+        "artifactId": "quarkus-core"
+      }
+    },
+    "SNYK-JAVA-IOQUARKUS-3149918": {
+      "id": "SNYK-JAVA-IOQUARKUS-3149918",
+      "title": "Access Restriction Bypass",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:H",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.14.2)"
+        ]
+      },
+      "fixedIn": [
+        "2.14.2"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "high",
+      "cvssScore": 8.2,
+      "moduleName": "io.quarkus:quarkus-vertx-http",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-12-13T01:11:40.428400Z"
+        }
+      ],
+      "description": "## Overview\n[io.quarkus:quarkus-vertx-http](https://github.com/quarkusio/quarkus) is a Cloud Native, (Linux) Container First framework for writing Java applications.\nAffected versions of this package are vulnerable to Access Restriction Bypass via the `CORS` filter which allows simple `GET` and `POST` requests with invalid Origin to proceed.\n## Remediation\nUpgrade `io.quarkus:quarkus-vertx-http` to version 2.14.2 or higher.\n## References\n- [GitHub Commit](https://github.com/quarkusio/quarkus/commit/cc26704d3bed46ed1d5caee90f22894952a07182)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2148867)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-4147"
+        ],
+        "CWE": [
+          "CWE-284"
+        ]
+      },
+      "packageName": "io.quarkus:quarkus-vertx-http",
+      "proprietary": false,
+      "disclosureTime": "2022-11-28T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.quarkus",
+        "artifactId": "quarkus-vertx-http"
+      }
+    },
+    "SNYK-JAVA-IOQUARKUS-3330765": {
+      "id": "SNYK-JAVA-IOQUARKUS-3330765",
+      "title": "Cross-site Scripting (XSS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.13.7.Final)"
+        ]
+      },
+      "fixedIn": [
+        "2.13.7.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.4,
+      "moduleName": "io.quarkus:quarkus-vertx-http",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2023-03-26T14:49:36.697430Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "cvssV3BaseScore": 6.1,
+          "modificationTime": "2023-03-04T01:10:10.020882Z"
+        }
+      ],
+      "description": "## Overview\n[io.quarkus:quarkus-vertx-http](https://github.com/quarkusio/quarkus) is a Cloud Native, (Linux) Container First framework for writing Java applications.\nAffected versions of this package are vulnerable to Cross-site Scripting (XSS) due to improper user-input sanitization, if the Quarkus Form Authentication session cookie Path attribute is set to `/`.\n\n**Note:** This attack can be prevented with the Quarkus CSRF Prevention feature.\n## Details\n\nA cross-site scripting attack occurs when the attacker tricks a legitimate web-based application or site to accept a request as originating from a trusted source.\n\nThis is done by escaping the context of the web application; the web application then delivers that data to its users along with other trusted dynamic content, without validating it. The browser unknowingly executes malicious script on the client side (through client-side languages; usually JavaScript or HTML)  in order to perform actions that are otherwise typically blocked by the browser’s Same Origin Policy.\n\nInjecting malicious code is the most prevalent manner by which XSS is exploited; for this reason, escaping characters in order to prevent this manipulation is the top method for securing code against this vulnerability.\n\nEscaping means that the application is coded to mark key characters, and particularly key characters included in user input, to prevent those characters from being interpreted in a dangerous context. For example, in HTML, `<` can be coded as  `&lt`; and `>` can be coded as `&gt`; in order to be interpreted and displayed as themselves in text, while within the code itself, they are used for HTML tags. If malicious content is injected into an application that escapes special characters and that malicious content uses `<` and `>` as HTML tags, those characters are nonetheless not interpreted as HTML tags by the browser if they’ve been correctly escaped in the application code and in this way the attempted attack is diverted.\n \nThe most prominent use of XSS is to steal cookies (source: OWASP HttpOnly) and hijack user sessions, but XSS exploits have been used to expose sensitive information, enable access to privileged services and functionality and deliver malware. \n\n### Types of attacks\nThere are a few methods by which XSS can be manipulated:\n\n|Type|Origin|Description|\n|--|--|--|\n|**Stored**|Server|The malicious code is inserted in the application (usually as a link) by the attacker. The code is activated every time a user clicks the link.|\n|**Reflected**|Server|The attacker delivers a malicious link externally from the vulnerable web site application to a user. When clicked, malicious code is sent to the vulnerable web site, which reflects the attack back to the user’s browser.| \n|**DOM-based**|Client|The attacker forces the user’s browser to render a malicious page. The data in the page itself delivers the cross-site scripting data.|\n|**Mutated**| |The attacker injects code that appears safe, but is then rewritten and modified by the browser, while parsing the markup. An example is rebalancing unclosed quotation marks or even adding quotation marks to unquoted parameters.|\n\n### Affected environments\nThe following environments are susceptible to an XSS attack:\n\n* Web servers\n* Application servers\n* Web application environments\n\n### How to prevent\nThis section describes the top best practices designed to specifically protect your code: \n\n* Sanitize data input in an HTTP request before reflecting it back, ensuring all data is validated, filtered or escaped before echoing anything back to the user, such as the values of query parameters during searches. \n* Convert special characters such as `?`, `&`, `/`, `<`, `>` and spaces to their respective HTML or URL encoded equivalents. \n* Give users the option to disable client-side scripts.\n* Redirect invalid requests.\n* Detect simultaneous logins, including those from two separate IP addresses, and invalidate those sessions.\n* Use and enforce a Content Security Policy (source: Wikipedia) to disable any features that might be manipulated for an XSS attack.\n* Read the documentation for any of the libraries referenced in your code to understand which elements allow for embedded HTML.\n\n## Remediation\nUpgrade `io.quarkus:quarkus-vertx-http` to version 2.13.7.Final or higher.\n## References\n- [GitHub Commit](https://github.com/quarkusio/quarkus/commit/47bb512f8c3ff6f1f87df87f0e9761305775fa1b)\n- [GitHub PR](https://github.com/quarkusio/quarkus/pull/30413)\n- [GitHub Release](https://github.com/quarkusio/quarkus/releases/tag/2.13.7.Final)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2158081)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2023-0044"
+        ],
+        "CWE": [
+          "CWE-79"
+        ],
+        "GHSA": [
+          "GHSA-c57v-hc7m-8px2"
+        ]
+      },
+      "packageName": "io.quarkus:quarkus-vertx-http",
+      "proprietary": false,
+      "disclosureTime": "2023-02-23T21:30:16Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "io.quarkus",
+        "artifactId": "quarkus-vertx-http"
+      }
+    },
+    "SNYK-JAVA-ORGAPACHESANTUARIO-1655558": {
+      "id": "SNYK-JAVA-ORGAPACHESANTUARIO-1655558",
+      "title": "Improper Input Validation",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[2.2.0,2.2.3)",
+          "[,2.1.7)"
+        ]
+      },
+      "fixedIn": [
+        "2.2.3",
+        "2.1.7"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.apache.santuario:xmlsec",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2023-03-26T15:05:15.137242Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-10-05T13:10:23.413623Z"
+        }
+      ],
+      "description": "## Overview\n[org.apache.santuario:xmlsec](https://mvnrepository.com/artifact/org.apache.santuario/xmlsec) is a package to provide implementation of the primary security standards for XML, XML-Signature Syntax and Processing and XML Encryption Syntax and Processing.\nAffected versions of this package are vulnerable to Improper Input Validation due to an issue where the \"secureValidation\" property is not passed correctly when creating a `KeyInfo` from a `KeyInfoReference` element. This allows an attacker to abuse an XPath Transform to extract any local .xml files in a `RetrievalMethod` element.\n## Remediation\nUpgrade `org.apache.santuario:xmlsec` to version 2.2.3, 2.1.7 or higher.\n## References\n- [Apache Security Advisory](https://lists.apache.org/thread.html/r8848751b6a5dd78cc9e99d627e74fecfaffdfa1bb615dce827aad633%40%3Cdev.santuario.apache.org%3E)\n- [GitHub Release](https://github.com/apache/santuario-xml-security-java/releases/tag/xmlsec-2.1.7)\n- [GitHub Release](https://github.com/apache/santuario-xml-security-java/releases/tag/xmlsec-2.2.3)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-40690"
+        ],
+        "CWE": [
+          "CWE-20"
+        ]
+      },
+      "packageName": "org.apache.santuario:xmlsec",
+      "proprietary": false,
+      "disclosureTime": "2021-09-20T11:51:45Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.apache.santuario",
+        "artifactId": "xmlsec"
+      }
+    },
+    "SNYK-JAVA-ORGAPACHESANTUARIO-30029": {
+      "id": "SNYK-JAVA-ORGAPACHESANTUARIO-30029",
+      "title": "XML signature spoofing",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+      "credit": [
+        "James Forshaw"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[1.4.0,1.4.8)",
+          "[1.5.0,1.5.5)"
+        ]
+      },
+      "fixedIn": [
+        "1.4.8",
+        "1.5.5"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 4.3,
+      "moduleName": "org.apache.santuario:xmlsec",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+          "cvssV3BaseScore": 4.3,
+          "modificationTime": "2023-02-09T11:23:50.108949Z"
+        }
+      ],
+      "description": "## Overview\n[org.apache.santuario:xmlsec](https://mvnrepository.com/artifact/org.apache.santuario/xmlsec) is a package to provide implementation of the primary security standards for XML, XML-Signature Syntax and Processing and XML Encryption Syntax and Processing.\nAffected versions of this package are vulnerable to XML signature spoofing. The class `DOMCanonicalizationMethod` within `jcp/xml/dsig/internal/dom/DOMCanonicalizationMethod.java` allows context-dependent attackers to spoof an XML Signature by using the CanonicalizationMethod parameter to specify an arbitrary weak \"canonicalization algorithm to apply to the SignedInfo part of the Signature.\"\n## Remediation\nUpgrade `org.apache.santuario:xmlsec` to version 1.4.8, 1.5.5 or higher.\n## References\n- [Apache Mail Archives](http://santuario.apache.org/secadv.data/CVE-2013-2172.txt.asc)\n- [GitHub Commit](https://github.com/apache/santuario-java/commit/8e8f8bf92a43608d7d5f9e357fae19244454a61f)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2013-2172)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2013-2172"
+        ],
+        "CWE": [
+          "CWE-310"
+        ]
+      },
+      "packageName": "org.apache.santuario:xmlsec",
+      "proprietary": false,
+      "disclosureTime": "2013-08-20T22:55:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.apache.santuario",
+        "artifactId": "xmlsec"
+      }
+    },
+    "SNYK-JAVA-ORGAPACHESANTUARIO-30030": {
+      "id": "SNYK-JAVA-ORGAPACHESANTUARIO-30030",
+      "title": "Denial of Service (DoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+      "credit": [
+        "James Forshaw"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,1.5.6)"
+        ]
+      },
+      "fixedIn": [
+        "1.5.6"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 4.3,
+      "moduleName": "org.apache.santuario:xmlsec",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 4.3,
+          "modificationTime": "2023-02-09T11:24:07.469992Z"
+        }
+      ],
+      "description": "## Overview\n\n[org.apache.santuario:xmlsec](https://mvnrepository.com/artifact/org.apache.santuario/xmlsec) is an package to provide implementation of the primary security standards for XML, XML-Signature Syntax and Processing and XML Encryption Syntax and Processing.\n\n\nAffected versions of this package are vulnerable to Denial of Service (DoS).\nWhen applying Transforms, it allows remote attackers to cause a denial of service (memory consumption) via crafted Document Type Definitions (DTDs), related to signatures.\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\n\nUpgrade `org.apache.santuario:xmlsec` to version 1.5.6 or higher.\n\n\n## References\n\n- [Apache Mail Archives](https://cwiki.apache.org/confluence/download/attachments/27821224/cve-2013-4517.txt.asc)\n\n- [GitHub Commit](https://github.com/apache/santuario-java/commit/a09b9042f7759d094f2d49f40fc7bcf145164b25)\n\n- [Redhat Bugzilla](https://bugzilla.redhat.com/CVE-2013-4517)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2013-4517"
+        ],
+        "CWE": [
+          "CWE-399"
+        ]
+      },
+      "packageName": "org.apache.santuario:xmlsec",
+      "proprietary": false,
+      "disclosureTime": "2013-12-19T16:51:49Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.apache.santuario",
+        "artifactId": "xmlsec"
+      }
+    },
+    "SNYK-JAVA-ORGAPACHESANTUARIO-30031": {
+      "id": "SNYK-JAVA-ORGAPACHESANTUARIO-30031",
+      "title": "Denial of Service (DoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[1.4.0,1.4.8)",
+          "[1.5.0,1.5.3)"
+        ]
+      },
+      "fixedIn": [
+        "1.4.8",
+        "1.5.3"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.apache.santuario:xmlsec",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2023-02-09T11:24:14.890754Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2023-02-09T11:24:54.350446Z"
+        }
+      ],
+      "description": "## Overview\n[`org.apache.santuario:xmlsec`](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22xmlsec%22)\nUnspecified vulnerability in Oracle Java SE 7u40 and earlier, Java SE 6u60 and earlier, JRockit R28.2.8 and earlier, JRockit R27.7.6 and earlier, and Java SE Embedded 7u40 and earlier allows remote attackers to affect availability via unknown vectors related to Security.\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## References\n\n- [Redhat Bugzilla](https://bugzilla.redhat.com/CVE-2013-5823)\n- [Apache-SVN](http://svn.apache.org/viewvc?view=revision&revision=1367492)\n- [Patch Diff](http://hg.openjdk.java.net/jdk7u/jdk7u/jdk/rev/a7758faab30d)\n- [Jira Issue](https://issues.apache.org/jira/browse/SANTUARIO-334)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2013-5823"
+        ],
+        "CWE": [
+          "CWE-400"
+        ]
+      },
+      "packageName": "org.apache.santuario:xmlsec",
+      "proprietary": false,
+      "disclosureTime": "2013-10-15T16:51:49Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.apache.santuario",
+        "artifactId": "xmlsec"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-1765539": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-1765539",
+      "title": "Improper Access Control",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.4)",
+          "[21.0.0,21.3.0)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.4",
+        "21.3.0"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-01T19:43:00.305660Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T11:44:05.828458Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-24T01:11:09.006491Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Improper Access Control. It allows unauthenticated attacker with network access via TLS to compromise Oracle GraalVM Enterprise Edition. Successful attacks of this vulnerability can result in unauthorized ability to cause a partial denial of service.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.4, 21.3.0 or higher.\n## References\n- [Oracle Critical Patch Update Advisory](https://www.oracle.com/security-alerts/cpuoct2021.html#AppendixJAVA)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2015653)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-35578"
+        ],
+        "CWE": [
+          "CWE-284"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2021-10-19T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-1766172": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-1766172",
+      "title": "Access Restriction Bypass",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:N/A:N",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.4)",
+          "[21.0.0,21.3.0)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.4",
+        "21.3.0"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 6.8,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.8,
+          "modificationTime": "2022-05-03T21:29:28.141375Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.8,
+          "modificationTime": "2022-09-01T19:40:04.577393Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:R/S:C/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.8,
+          "modificationTime": "2022-09-24T01:11:06.879127Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Access Restriction Bypass via incorrect principal selection when using Kerberos Constrained Delegation result in unauthorized access to critical data or complete access to all GraalVM accessible data.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.4, 21.3.0 or higher.\n## References\n- [Oracle Security Advisory](https://www.oracle.com/security-alerts/cpuoct2021verbose.html#JAVA)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2015658)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-35567"
+        ],
+        "CWE": [
+          "CWE-284"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2021-10-19T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-1766242": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-1766242",
+      "title": "Timing Attack",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+      "credit": [
+        "Artem Smotrakov"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.4)",
+          "[21.0.0,21.3.0)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.4",
+        "21.3.0"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "low",
+      "cvssScore": 3.7,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 3.7,
+          "modificationTime": "2022-09-01T19:46:24.901733Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 3.7,
+          "modificationTime": "2022-05-03T21:31:30.235425Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 3.7,
+          "modificationTime": "2022-09-24T01:11:06.706617Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Timing Attack. It was discovered that the TLS implementation in the JSSE component of OpenJDK used non-constant comparisons when checking various data (such as session identifiers or verification data blocks) during TLS handshakes.  A malicious TLS client could possibly use this flaw to recover that data by observing timing differences in processing of various inputs.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.4, 21.3.0 or higher.\n## References\n- [Oracle Security Advisory](https://www.oracle.com/security-alerts/cpuoct2021.html#AppendixJAVA)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2015311)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-35603"
+        ],
+        "CWE": [
+          "CWE-208"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2021-10-19T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2343466": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2343466",
+      "title": "Out-of-bounds Write",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-10-28T01:10:26.388777Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T11:14:43.842465Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-10-27T02:45:04.421002Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Out-of-bounds Write. A flaw was found in the way the Hotspot component of OpenJDK processed classes with _fields that needed to be written to in `Rewriter::scan_method()`.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alerts](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041831)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21291"
+        ],
+        "CWE": [
+          "CWE-787"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2343470": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2343470",
+      "title": "Deserialization of Untrusted Data",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "low",
+      "cvssScore": 3.7,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cvssV3BaseScore": 3.7,
+          "modificationTime": "2022-10-28T01:10:48.119320Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cvssV3BaseScore": 3.7,
+          "modificationTime": "2022-05-11T11:13:35.893035Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "low",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cvssV3BaseScore": 3.7,
+          "modificationTime": "2022-09-01T19:46:26.503243Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Deserialization of Untrusted Data the `ObjectInputStream` class implementation in the `Serialization` component did not check superclasses against the deserialization filter (defined via `jdk.serialFilter` system or security property) in cases when those classes were available locally and not included in the serialized stream. A specially-crafted serialized stream could possibly use this flaw to bypass class deserialization restrictions.\n\n## Details\n\nSerialization is a process of converting an object into a sequence of bytes which can be persisted to a disk or database or can be sent through streams. The reverse process of creating object from sequence of bytes is called deserialization. Serialization is commonly used for communication (sharing objects between multiple hosts) and persistence (store the object state in a file or a database). It is an integral part of popular protocols like _Remote Method Invocation (RMI)_, _Java Management Extension (JMX)_, _Java Messaging System (JMS)_, _Action Message Format (AMF)_, _Java Server Faces (JSF) ViewState_, etc.\n\n_Deserialization of untrusted data_ ([CWE-502](https://cwe.mitre.org/data/definitions/502.html)) is when the application deserializes untrusted data without sufficiently verifying that the resulting data will be valid, thus allowing the attacker to control the state or the flow of the execution.\n  \n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alerts](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041801)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21248"
+        ],
+        "CWE": [
+          "CWE-502"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2343474": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2343474",
+      "title": "Allocation of Resources Without Limits or Throttling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Fabian Meumertzheim"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-10-28T01:10:47.993375Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T11:23:13.323759Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-10-27T02:50:41.346237Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling. A flaw was found in the way the `TIFFFaxDecompressor`, `TIFFLZWDecompressor`, and `TIFFPackBitsDecompressor` classes implementations in the `ImageIO` component of `OpenJDK` handled memory allocations when processing `TIFF` images. A specially-crafted TIFF image with a small size could cause a Java application to allocate an excessive amount of memory when opened.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alert](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041789)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21366"
+        ],
+        "CWE": [
+          "CWE-770"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2343477": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2343477",
+      "title": "Information Exposure",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+      "credit": [
+        "Jonni Passki"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-10-28T01:10:47.481398Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T11:14:09.747932Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-24T18:50:20.084188Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Information Exposure. `TransformerImpl` class implementation in the `JAXP` component did not properly check access restrictions when performing URI resolution. This could possibly lead to information disclosure when performing XSLT transformations.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alerts](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041435)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21282"
+        ],
+        "CWE": [
+          "CWE-200"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2343487": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2343487",
+      "title": "Allocation of Resources Without Limits or Throttling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Markus Loewe"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-10-28T01:10:47.545773Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T11:15:01.399093Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-01T19:46:24.555045Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling the implementation of the `IdentityHashMap` class doesn't properly validate the value of its size attribute when creating object instances from a serialized form. A specially-crafted input could cause a Java application to use an excessive amount of memory when deserialized.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alerts](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041427)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21294"
+        ],
+        "CWE": [
+          "CWE-770"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2343490": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2343490",
+      "title": "Allocation of Resources Without Limits or Throttling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Fabian Meumertzheim"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T11:21:31.263949Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-30T01:10:58.669422Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-01T19:46:32.614950Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling. A flaw was found in the way the `BMPImageReader` class implementation in the `ImageIO` performs memory allocations when reading palette information from `BMP` images. A specially-crafted BMP file could cause a Java application to consume an excessive amount of memory when opened.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alerts](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041491)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21360"
+        ],
+        "CWE": [
+          "CWE-770"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2343493": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2343493",
+      "title": "Allocation of Resources Without Limits or Throttling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-10-28T01:10:47.726821Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T11:13:52.767593Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-10-27T02:55:12.929963Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling. A flaw was found in the way the `TIFFNullDecompressor` class implementation in the `ImageIO` component performs reading of uncompressed `TIFF` files. A specially-crafted `TIFF` image could cause the decompressor to create image objects with an inconsistent state due to failure to fully read the image.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alerts](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041479)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21277"
+        ],
+        "CWE": [
+          "CWE-770"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2346391": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2346391",
+      "title": "Infinite loop",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-08-04T11:02:45.925336Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-10-26T00:20:47.734900Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-30T01:11:00.829662Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Infinite loop. A flaw was found in the way the `XMLEntityScanner` and `XML11EntityScanner` classes in the `JAXP` component handles and normalized newlines in XML entities. A specially-crafted XML document could cause a Java application to enter an infinite loop when parsed.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alerts](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041472)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21299"
+        ],
+        "CWE": [
+          "CWE-835"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2346393": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2346393",
+      "title": "Information Exposure",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+      "credit": [
+        "Dan Rabe"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-10-28T01:10:48.055653Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T11:15:40.158335Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-24T18:50:15.023254Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Information Exposure. The `XMLEntityManager` class implementation in the `JAXP` component doesn't properly perform access checks. A Java application using a `SAX XML` parser in certain configurations could be tricked into disclosing information when parsing a specially-crafted XML file.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alerts](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041439)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21296"
+        ],
+        "CWE": [
+          "CWE-200"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2346395": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2346395",
+      "title": "Integer Overflow or Wraparound",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-01T19:46:34.157223Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-30T01:10:59.041757Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T11:22:22.240406Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Integer Overflow or Wraparound. A flaw was found in the `BMPImageReader` class implementation in the ImageIO component, which allows a specially-crafted BMP image to bypass previously applied protection and cause a Java application to allocate an excessive amount of memory when opened.\n\n**Note:** \n\n this is due to an incomplete fix for CVE-2021-35586.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alerts](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041785)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21365"
+        ],
+        "CWE": [
+          "CWE-190"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2346397": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2346397",
+      "title": "Improper Input Validation",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Markus Loewe"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-10-28T01:10:47.826743Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T11:14:51.324347Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-24T18:50:37.963670Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Improper Input Validation. It was discovered that the `StringBuffer` and `StringBuilder` classes implementation in the Libraries component failed to properly validate the value of the count attribute during object deserialization. A specially-crafted input could cause a Java application to misbehave because of `StringBuffer` or `StringBuilder` object instances in an inconsistent state.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alerts](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041417)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21293"
+        ],
+        "CWE": [
+          "CWE-20"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2346426": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2346426",
+      "title": "Uncaught Exception",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T11:14:26.369478Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-10-28T01:10:47.607494Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-01T19:44:33.137591Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Uncaught Exception. A flaw was found in the `Pattern` class implementation in the Libraries component. A specially crafted input could cause the `Pattern` class to raise an unexpected exception while performing regular expression matching, possibly causing a Java application using the class to misbehave.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alerts](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041400)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21283"
+        ],
+        "CWE": [
+          "CWE-248"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2346453": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2346453",
+      "title": "Improper Input Validation",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T11:19:15.650802Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-30T01:11:00.483378Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-24T18:52:25.537932Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Improper Input Validation. The `ObjectInputStream` class implementation in the `Serialization` component doesn't sufficiently validate data read from the input serialized stream when reading serialized exceptions. A specially-crafted serialized stream could use this flaw to bypass certain deserialization restrictions (defined via `jdk.serialFilter` system or security property).\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alerts](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041897)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21341"
+        ],
+        "CWE": [
+          "CWE-20"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2346571": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2346571",
+      "title": "Integer Overflow or Wraparound",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+      "credit": [
+        "Zhiqiang Zang"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-30T01:11:04.662561Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T11:17:17.509592Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:L/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-01T19:44:32.928870Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Integer Overflow or Wraparound. A flaw was found in the way the `Hotspot` component of OpenJDK handled array indexes on 64-bit x86 platform. A large index could trigger a displacement overflow in `LIRGenerator::emit_array_address`, possibly leading to access at an invalid array position.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alerts](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041878)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21305"
+        ],
+        "CWE": [
+          "CWE-190"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGGRAALVMSDK-2347581": {
+      "id": "SNYK-JAVA-ORGGRAALVMSDK-2347581",
+      "title": "Allocation of Resources Without Limits or Throttling",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,20.3.5)",
+          "[21.0.0,21.3.1)"
+        ]
+      },
+      "fixedIn": [
+        "20.3.5",
+        "21.3.1"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.graalvm.sdk:graal-sdk",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-01T19:46:27.138073Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-09-30T01:10:59.591235Z"
+        },
+        {
+          "assigner": "SUSE",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T11:18:05.141213Z"
+        }
+      ],
+      "description": "## Overview\n[org.graalvm.sdk:graal-sdk](https://search.maven.org/artifact/org.graalvm.sdk/graal-sdk) is a high-performance JDK distribution designed to accelerate the execution of applications written in Java and other JVM languages along with support for JavaScript, Ruby, Python, and a number of other popular languages.\nAffected versions of this package are vulnerable to Allocation of Resources Without Limits or Throttling. A flaw was found in the way the `Attributes` class in the `Libraries` component performs reading of attributes with very long values from the `JAR` file manifests. A specially-crafted JAR archive could cause a Java application reading its manifest to use an excessive amount of system resources and hang.\n## Remediation\nUpgrade `org.graalvm.sdk:graal-sdk` to version 20.3.5, 21.3.1 or higher.\n## References\n- [Oracle Security Alerts](https://www.oracle.com/security-alerts/cpujan2022.html)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2041884)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-21340"
+        ],
+        "CWE": [
+          "CWE-770"
+        ]
+      },
+      "packageName": "org.graalvm.sdk:graal-sdk",
+      "proprietary": false,
+      "disclosureTime": "2022-01-18T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.graalvm.sdk",
+        "artifactId": "graal-sdk"
+      }
+    },
+    "SNYK-JAVA-ORGJBOSSRESTEASY-1085989": {
+      "id": "SNYK-JAVA-ORGJBOSSRESTEASY-1085989",
+      "title": "Information Exposure",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[4.6.0, 4.6.1)",
+          "[4.0.0, 4.5.10)",
+          "[3.0.0, 3.16.0)"
+        ]
+      },
+      "fixedIn": [
+        "4.6.1",
+        "4.5.10",
+        "3.16.0"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.jboss.resteasy:resteasy-core",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-05-11T01:11:04.637641Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2022-10-25T21:42:47.020630Z"
+        }
+      ],
+      "description": "## Overview\n[org.jboss.resteasy:resteasy-core](https://github.com/resteasy/Resteasy) is a JBoss.org project aimed at providing productivity frameworks for developing client and server RESTful applications and services in Java.\nAffected versions of this package are vulnerable to Information Exposure. The endpoint class and method names are returned as part of the exception response when `Resteasy` cannot convert one of the request URI `path` / `query` / `matrix` parameters to a value expected by a given class `resource`/`method` method parameter.\n## Remediation\nUpgrade `org.jboss.resteasy:resteasy-core` to version 4.6.1, 4.5.10, 3.16.0 or higher.\n## References\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=1935927)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-20289"
+        ],
+        "CWE": [
+          "CWE-200"
+        ],
+        "GHSA": [
+          "GHSA-244r-fcj3-ghjq"
+        ]
+      },
+      "packageName": "org.jboss.resteasy:resteasy-core",
+      "proprietary": false,
+      "disclosureTime": "2021-03-03T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.jboss.resteasy",
+        "artifactId": "resteasy-core"
+      }
+    },
+    "SNYK-JAVA-ORGJBOSSRESTEASY-1303102": {
+      "id": "SNYK-JAVA-ORGJBOSSRESTEASY-1303102",
+      "title": "Cross-site Scripting (XSS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N/E:U/RL:O/RC:R",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,4.6.0.Final)"
+        ]
+      },
+      "fixedIn": [
+        "4.6.0.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.4,
+      "moduleName": "org.jboss.resteasy:resteasy-core",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:C/C:L/I:L/A:N",
+          "cvssV3BaseScore": 6.1,
+          "modificationTime": "2022-01-03T16:34:11.419720Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:L/I:L/A:N",
+          "cvssV3BaseScore": 5.4,
+          "modificationTime": "2022-10-25T21:37:45.808557Z"
+        }
+      ],
+      "description": "## Overview\n[org.jboss.resteasy:resteasy-core](https://github.com/resteasy/Resteasy) is a JBoss.org project aimed at providing productivity frameworks for developing client and server RESTful applications and services in Java.\nAffected versions of this package are vulnerable to Cross-site Scripting (XSS). Does not properly handle URL encoding when calling `@javax.ws.rs.PathParam` without any `@Produces` `MediaType`. This flaw allows an attacker to launch a reflected XSS attack. The highest threat from this vulnerability is to data confidentiality and integrity.\n## Details\n\nA cross-site scripting attack occurs when the attacker tricks a legitimate web-based application or site to accept a request as originating from a trusted source.\n\nThis is done by escaping the context of the web application; the web application then delivers that data to its users along with other trusted dynamic content, without validating it. The browser unknowingly executes malicious script on the client side (through client-side languages; usually JavaScript or HTML)  in order to perform actions that are otherwise typically blocked by the browser’s Same Origin Policy.\n\nInjecting malicious code is the most prevalent manner by which XSS is exploited; for this reason, escaping characters in order to prevent this manipulation is the top method for securing code against this vulnerability.\n\nEscaping means that the application is coded to mark key characters, and particularly key characters included in user input, to prevent those characters from being interpreted in a dangerous context. For example, in HTML, `<` can be coded as  `&lt`; and `>` can be coded as `&gt`; in order to be interpreted and displayed as themselves in text, while within the code itself, they are used for HTML tags. If malicious content is injected into an application that escapes special characters and that malicious content uses `<` and `>` as HTML tags, those characters are nonetheless not interpreted as HTML tags by the browser if they’ve been correctly escaped in the application code and in this way the attempted attack is diverted.\n \nThe most prominent use of XSS is to steal cookies (source: OWASP HttpOnly) and hijack user sessions, but XSS exploits have been used to expose sensitive information, enable access to privileged services and functionality and deliver malware. \n\n### Types of attacks\nThere are a few methods by which XSS can be manipulated:\n\n|Type|Origin|Description|\n|--|--|--|\n|**Stored**|Server|The malicious code is inserted in the application (usually as a link) by the attacker. The code is activated every time a user clicks the link.|\n|**Reflected**|Server|The attacker delivers a malicious link externally from the vulnerable web site application to a user. When clicked, malicious code is sent to the vulnerable web site, which reflects the attack back to the user’s browser.| \n|**DOM-based**|Client|The attacker forces the user’s browser to render a malicious page. The data in the page itself delivers the cross-site scripting data.|\n|**Mutated**| |The attacker injects code that appears safe, but is then rewritten and modified by the browser, while parsing the markup. An example is rebalancing unclosed quotation marks or even adding quotation marks to unquoted parameters.|\n\n### Affected environments\nThe following environments are susceptible to an XSS attack:\n\n* Web servers\n* Application servers\n* Web application environments\n\n### How to prevent\nThis section describes the top best practices designed to specifically protect your code: \n\n* Sanitize data input in an HTTP request before reflecting it back, ensuring all data is validated, filtered or escaped before echoing anything back to the user, such as the values of query parameters during searches. \n* Convert special characters such as `?`, `&`, `/`, `<`, `>` and spaces to their respective HTML or URL encoded equivalents. \n* Give users the option to disable client-side scripts.\n* Redirect invalid requests.\n* Detect simultaneous logins, including those from two separate IP addresses, and invalidate those sessions.\n* Use and enforce a Content Security Policy (source: Wikipedia) to disable any features that might be manipulated for an XSS attack.\n* Read the documentation for any of the libraries referenced in your code to understand which elements allow for embedded HTML.\n\n## Remediation\nUpgrade `org.jboss.resteasy:resteasy-core` to version 4.6.0.Final or higher.\n## References\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=1942819)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-20293"
+        ],
+        "CWE": [
+          "CWE-79"
+        ],
+        "GHSA": [
+          "GHSA-5h26-c766-g93v"
+        ]
+      },
+      "packageName": "org.jboss.resteasy:resteasy-core",
+      "proprietary": false,
+      "disclosureTime": "2021-06-10T14:08:21Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.jboss.resteasy",
+        "artifactId": "resteasy-core"
+      }
+    },
+    "SNYK-JAVA-ORGJBOSSRESTEASY-3338627": {
+      "id": "SNYK-JAVA-ORGJBOSSRESTEASY-3338627",
+      "title": "Creation of Temporary File With Insecure Permissions",
+      "CVSSv3": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[0,4.7.8.Final)"
+        ]
+      },
+      "fixedIn": [
+        "4.7.8.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.jboss.resteasy:resteasy-core",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:L/I:L/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2023-02-01T14:09:50.914731Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:L/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 5.5,
+          "modificationTime": "2023-03-02T01:10:06.588327Z"
+        }
+      ],
+      "description": "## Overview\n[org.jboss.resteasy:resteasy-core](https://github.com/resteasy/Resteasy) is a JBoss.org project aimed at providing productivity frameworks for developing client and server RESTful applications and services in Java.\nAffected versions of this package are vulnerable to Creation of Temporary File With Insecure Permissions such that the insecure `File.createTempFile()` which is used in the `DataSourceProvider`, `FileProvider` and `Mime4JWorkaround` classes creates temp files with insecure permissions that could be read by a local user.\n## Remediation\nUpgrade `org.jboss.resteasy:resteasy-core` to version 4.7.8.Final or higher.\n## References\n- [GitHub Commit](https://github.com/resteasy/resteasy/commit/277ea6d15b793b53b170ae9d8f9aba83b82d33c8)\n- [GitHub Release](https://github.com/resteasy/resteasy/releases/tag/4.7.8.Final)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2166004)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2023-0482"
+        ],
+        "CWE": [
+          "CWE-378"
+        ]
+      },
+      "packageName": "org.jboss.resteasy:resteasy-core",
+      "proprietary": false,
+      "disclosureTime": "2023-01-31T00:00:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.jboss.resteasy",
+        "artifactId": "resteasy-core"
+      }
+    },
+    "SNYK-JAVA-ORGKEYCLOAK-2987457": {
+      "id": "SNYK-JAVA-ORGKEYCLOAK-2987457",
+      "title": "Arbitrary Code Execution",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,19.0.2)"
+        ]
+      },
+      "fixedIn": [
+        "19.0.2"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "high",
+      "cvssScore": 7.2,
+      "moduleName": "org.keycloak:keycloak-saml-core",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H",
+          "cvssV3BaseScore": 6.4,
+          "modificationTime": "2023-03-26T14:49:54.039484Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+          "cvssV3BaseScore": 7.2,
+          "modificationTime": "2022-08-12T01:11:07.213518Z"
+        }
+      ],
+      "description": "## Overview\n[org.keycloak:keycloak-saml-core](https://github.com/keycloak/keycloak.git/keycloak-saml-core) is an Identity and Access Management plugin for Keycloak.\nAffected versions of this package are vulnerable to Arbitrary Code Execution. It allows arbitrary Javascript to be uploaded for SAML protocol mapper even if UPLOAD_SCRIPTS feature disabled.\r\nAn issue was discovered in Keycloak that allows arbitrary Javascript to be uploaded for the SAML protocol mapper even if the UPLOAD_SCRIPTS feature is disabled.\n## Remediation\nUpgrade `org.keycloak:keycloak-saml-core` to version 19.0.2 or higher.\n## References\n- [GitHub Advisory](https://github.com/advisories/GHSA-q2gp-gph3-88x9)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2115392)\n- [RedHat CVE Database](https://access.redhat.com/security/cve/CVE-2022-2668)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-2668"
+        ],
+        "CWE": [
+          "CWE-94"
+        ],
+        "GHSA": [
+          "GHSA-q2gp-gph3-88x9"
+        ]
+      },
+      "packageName": "org.keycloak:keycloak-saml-core",
+      "proprietary": false,
+      "disclosureTime": "2022-08-06T00:00:42Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.keycloak",
+        "artifactId": "keycloak-saml-core"
+      }
+    },
+    "SNYK-JAVA-ORGKEYCLOAK-31398": {
+      "id": "SNYK-JAVA-ORGKEYCLOAK-31398",
+      "title": "Denial of Service (DoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[1.2.0.Final, 2.5.5.Final)"
+        ]
+      },
+      "fixedIn": [
+        "2.5.5.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "moduleName": "org.keycloak:keycloak-saml-core",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-01-03T16:25:05.491443Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2023-03-26T14:50:34.332535Z"
+        }
+      ],
+      "description": "## Overview\r\n[`org.keycloak:keycloak-saml-core`](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22keycloak-saml-core%22)\r\nAffected versions of this package are vulnerable to Denial of Service (DoS) attacks. It mishandles `Logout` requests that contain an `Extension` element, which triggers an infinite loop.\r\n\r\n## Details\r\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\r\n\r\n## References\r\n- [NVD](https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-2646)\r\n- [Redhat Security Advisory](https://access.redhat.com/security/cve/cve-2017-2646)",
+      "identifiers": {
+        "CVE": [
+          "CVE-2017-2646"
+        ],
+        "CWE": [
+          "CWE-400"
+        ]
+      },
+      "packageName": "org.keycloak:keycloak-saml-core",
+      "proprietary": false,
+      "disclosureTime": "2017-03-27T03:25:08Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.keycloak",
+        "artifactId": "keycloak-saml-core"
+      }
+    },
+    "SNYK-JAVA-ORGKEYCLOAK-31579": {
+      "id": "SNYK-JAVA-ORGKEYCLOAK-31579",
+      "title": "Information Exposure",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Hynek Mlnarik"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.5.1.Final)"
+        ]
+      },
+      "fixedIn": [
+        "2.5.1.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 4.3,
+      "moduleName": "org.keycloak:keycloak-saml-core",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 4.3,
+          "modificationTime": "2023-02-09T11:23:56.865064Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 4.3,
+          "modificationTime": "2023-02-09T11:25:03.481159Z"
+        }
+      ],
+      "description": "## Overview\n[`org.keycloak:keycloak-saml-core`](https://keycloak.org) is an open Source Identity and Access Management for modern Applications and Services.\n\nAffected versions of the package are vulnerable to Information Exposure. In certain cases, the SAML request parser replaces special strings with system properties.\n\n## Remediation\nUpgrade `org.keycloak:keycloak-saml-core` to version 2.5.1.Final or higher.\n\n## References\n- [Redhat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id&#x3D;1410481)\n- [Github PR](https://github.com/keycloak/keycloak/pull/3715)\n- [Github Commit](https://github.com/keycloak/keycloak/pull/3715/commits/0cb5ba0f6e83162d221681f47b470c3042eef237)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2015-2582"
+        ],
+        "CWE": [
+          "CWE-200"
+        ]
+      },
+      "packageName": "org.keycloak:keycloak-saml-core",
+      "proprietary": false,
+      "disclosureTime": "2015-07-16T10:59:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.keycloak",
+        "artifactId": "keycloak-saml-core"
+      }
+    },
+    "SNYK-JAVA-ORGKEYCLOAK-32107": {
+      "id": "SNYK-JAVA-ORGKEYCLOAK-32107",
+      "title": "Host Header Injection",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.0.0.Final)"
+        ]
+      },
+      "fixedIn": [
+        "2.0.0.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "moduleName": "org.keycloak:keycloak-saml-core",
+      "cvssDetails": [],
+      "description": "## Overview\n[org.keycloak:keycloak-saml-core](https://github.com/keycloak/keycloak) is an access Management for modern Applications and Services.\n\nAffected versions of this package are vulnerable to Host Header Injection, causing the application to send a poisoned URL as the password reset link.\n\n## Remediation\nUpgrade `org.keycloak:keycloak-saml-core` to version 2.0.0 or higher.\n\n## References\n- [GitHub Commit](https://github.com/keycloak/keycloak-documentation/pull/268/commits/a2b58aadee42af2c375b72e86dffc2cf23cc3770)\n- [NVD](https://nvd.nist.gov/vuln/detail/CVE-2017-1000500)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2017-1000500"
+        ],
+        "CWE": [
+          "CWE-444"
+        ]
+      },
+      "packageName": "org.keycloak:keycloak-saml-core",
+      "proprietary": false,
+      "disclosureTime": "2017-12-14T17:51:09.051000Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.keycloak",
+        "artifactId": "keycloak-saml-core"
+      }
+    },
+    "SNYK-JAVA-ORGKEYCLOAK-72428": {
+      "id": "SNYK-JAVA-ORGKEYCLOAK-72428",
+      "title": "Information Exposure",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+      "credit": [
+        "Hynek Mlnarik"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.5.1.Final)"
+        ]
+      },
+      "fixedIn": [
+        "2.5.1.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 6.5,
+      "moduleName": "org.keycloak:keycloak-saml-core",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.5,
+          "modificationTime": "2022-01-03T16:25:10.074358Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.5,
+          "modificationTime": "2023-03-26T14:50:27.967470Z"
+        }
+      ],
+      "description": "## Overview\n[org.keycloak:keycloak-saml-core](https://github.com/hmlnarik/keycloak) is an Open Source Identity and Access Management For Modern Applications and Services.\r\n\r\nAffected versions of this package are vulnerable to Information Exposure. While parsing `SAML` messages, the `StaxParserUtil` class replaced special strings for obtaining attribute values with system property. This could allow an attacker to determine values of system properties at the attacked system by formatting the `SAML` request ID field to be the chosen system property which could be obtained in the `InResponseTo` field in the response.\r\n\r\n## Remediation\r\nUpgrade `org.keycloak:keycloak-saml-core` to version 2.5.1 or higher.\n\n## References\n- [GitHub Commit](https://github.com/keycloak/keycloak/pull/3715/commits/0cb5ba0f6e83162d221681f47b470c3042eef237)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2017-2582)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2017-2582"
+        ],
+        "CWE": [
+          "CWE-200"
+        ]
+      },
+      "packageName": "org.keycloak:keycloak-saml-core",
+      "proprietary": false,
+      "disclosureTime": "2017-01-10T17:16:51Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.keycloak",
+        "artifactId": "keycloak-saml-core"
+      }
+    }
+  },
+  "issues": [
+    {
+      "pkgName": "com.fasterxml.jackson.core:jackson-databind",
+      "pkgVersion": "2.12.1",
+      "issueId": "SNYK-JAVA-COMFASTERXMLJACKSONCORE-2326698",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "com.fasterxml.jackson.core:jackson-databind",
+      "pkgVersion": "2.12.1",
+      "issueId": "SNYK-JAVA-COMFASTERXMLJACKSONCORE-2421244",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "com.fasterxml.jackson.core:jackson-databind",
+      "pkgVersion": "2.12.1",
+      "issueId": "SNYK-JAVA-COMFASTERXMLJACKSONCORE-3038424",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "com.fasterxml.jackson.core:jackson-databind",
+      "pkgVersion": "2.12.1",
+      "issueId": "SNYK-JAVA-COMFASTERXMLJACKSONCORE-3038426",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.netty:netty-codec-http",
+      "pkgVersion": "4.1.49.Final",
+      "issueId": "SNYK-JAVA-IONETTY-1020439",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.netty:netty-codec-http",
+      "pkgVersion": "4.1.49.Final",
+      "issueId": "SNYK-JAVA-IONETTY-1070799",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.netty:netty-codec-http",
+      "pkgVersion": "4.1.49.Final",
+      "issueId": "SNYK-JAVA-IONETTY-1317097",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.netty:netty-codec-http",
+      "pkgVersion": "4.1.49.Final",
+      "issueId": "SNYK-JAVA-IONETTY-2314893",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.netty:netty-handler",
+      "pkgVersion": "4.1.49.Final",
+      "issueId": "SNYK-JAVA-IONETTY-1042268",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.netty:netty-handler",
+      "pkgVersion": "4.1.49.Final",
+      "issueId": "SNYK-JAVA-IONETTY-1082235",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.netty:netty-common",
+      "pkgVersion": "4.1.49.Final",
+      "issueId": "SNYK-JAVA-IONETTY-1082234",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.netty:netty-common",
+      "pkgVersion": "4.1.49.Final",
+      "issueId": "SNYK-JAVA-IONETTY-2812456",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.netty:netty-transport",
+      "pkgVersion": "4.1.49.Final",
+      "issueId": "SNYK-JAVA-IONETTY-1082236",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.netty:netty-codec-http2",
+      "pkgVersion": "4.1.49.Final",
+      "issueId": "SNYK-JAVA-IONETTY-1083991",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.netty:netty-codec-http2",
+      "pkgVersion": "4.1.49.Final",
+      "issueId": "SNYK-JAVA-IONETTY-1089809",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.netty:netty-codec",
+      "pkgVersion": "4.1.49.Final",
+      "issueId": "SNYK-JAVA-IONETTY-1584063",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.netty:netty-codec",
+      "pkgVersion": "4.1.49.Final",
+      "issueId": "SNYK-JAVA-IONETTY-1584064",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.quarkus:quarkus-core",
+      "pkgVersion": "1.13.3.Final",
+      "issueId": "SNYK-JAVA-IOQUARKUS-2331899",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.quarkus:quarkus-vertx-http",
+      "pkgVersion": "1.13.3.Final",
+      "issueId": "SNYK-JAVA-IOQUARKUS-3149918",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "io.quarkus:quarkus-vertx-http",
+      "pkgVersion": "1.13.3.Final",
+      "issueId": "SNYK-JAVA-IOQUARKUS-3330765",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.apache.santuario:xmlsec",
+      "pkgVersion": "1.5.1",
+      "issueId": "SNYK-JAVA-ORGAPACHESANTUARIO-1655558",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.apache.santuario:xmlsec",
+      "pkgVersion": "1.5.1",
+      "issueId": "SNYK-JAVA-ORGAPACHESANTUARIO-30029",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.apache.santuario:xmlsec",
+      "pkgVersion": "1.5.1",
+      "issueId": "SNYK-JAVA-ORGAPACHESANTUARIO-30030",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.apache.santuario:xmlsec",
+      "pkgVersion": "1.5.1",
+      "issueId": "SNYK-JAVA-ORGAPACHESANTUARIO-30031",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-1765539",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-1766172",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-1766242",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2343466",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2343470",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2343474",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2343477",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2343487",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2343490",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2343493",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2346391",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2346393",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2346395",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2346397",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2346426",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2346453",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2346571",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.graalvm.sdk:graal-sdk",
+      "pkgVersion": "21.0.0",
+      "issueId": "SNYK-JAVA-ORGGRAALVMSDK-2347581",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.jboss.resteasy:resteasy-core",
+      "pkgVersion": "4.5.9.Final",
+      "issueId": "SNYK-JAVA-ORGJBOSSRESTEASY-1085989",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.jboss.resteasy:resteasy-core",
+      "pkgVersion": "4.5.9.Final",
+      "issueId": "SNYK-JAVA-ORGJBOSSRESTEASY-1303102",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.jboss.resteasy:resteasy-core",
+      "pkgVersion": "4.5.9.Final",
+      "issueId": "SNYK-JAVA-ORGJBOSSRESTEASY-3338627",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.keycloak:keycloak-saml-core",
+      "pkgVersion": "1.8.1.Final",
+      "issueId": "SNYK-JAVA-ORGKEYCLOAK-2987457",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.keycloak:keycloak-saml-core",
+      "pkgVersion": "1.8.1.Final",
+      "issueId": "SNYK-JAVA-ORGKEYCLOAK-31398",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.keycloak:keycloak-saml-core",
+      "pkgVersion": "1.8.1.Final",
+      "issueId": "SNYK-JAVA-ORGKEYCLOAK-31579",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.keycloak:keycloak-saml-core",
+      "pkgVersion": "1.8.1.Final",
+      "issueId": "SNYK-JAVA-ORGKEYCLOAK-32107",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.keycloak:keycloak-saml-core",
+      "pkgVersion": "1.8.1.Final",
+      "issueId": "SNYK-JAVA-ORGKEYCLOAK-72428",
+      "fixInfo": {}
+    }
+  ],
+  "org": {
+    "id": "63884128-5f57-4752-b9c0-9d0882873bf4",
+    "name": "crda-engineering-dev"
+  }
+}

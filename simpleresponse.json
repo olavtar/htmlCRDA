@@ -1,0 +1,550 @@
+{
+  "ok": false,
+  "packageManager": "maven",
+  "issuesData": {
+    "SNYK-JAVA-ORGAPACHESANTUARIO-1655558": {
+      "id": "SNYK-JAVA-ORGAPACHESANTUARIO-1655558",
+      "title": "Improper Input Validation",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:L/I:N/A:N",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[2.2.0,2.2.3)",
+          "[,2.1.7)"
+        ]
+      },
+      "fixedIn": [
+        "2.2.3",
+        "2.1.7"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.apache.santuario:xmlsec",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2023-03-26T15:05:15.137242Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-10-05T13:10:23.413623Z"
+        }
+      ],
+      "description": "## Overview\n[org.apache.santuario:xmlsec](https://mvnrepository.com/artifact/org.apache.santuario/xmlsec) is a package to provide implementation of the primary security standards for XML, XML-Signature Syntax and Processing and XML Encryption Syntax and Processing.\nAffected versions of this package are vulnerable to Improper Input Validation due to an issue where the \"secureValidation\" property is not passed correctly when creating a `KeyInfo` from a `KeyInfoReference` element. This allows an attacker to abuse an XPath Transform to extract any local .xml files in a `RetrievalMethod` element.\n## Remediation\nUpgrade `org.apache.santuario:xmlsec` to version 2.2.3, 2.1.7 or higher.\n## References\n- [Apache Security Advisory](https://lists.apache.org/thread.html/r8848751b6a5dd78cc9e99d627e74fecfaffdfa1bb615dce827aad633%40%3Cdev.santuario.apache.org%3E)\n- [GitHub Release](https://github.com/apache/santuario-xml-security-java/releases/tag/xmlsec-2.1.7)\n- [GitHub Release](https://github.com/apache/santuario-xml-security-java/releases/tag/xmlsec-2.2.3)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2021-40690"
+        ],
+        "CWE": [
+          "CWE-20"
+        ]
+      },
+      "packageName": "org.apache.santuario:xmlsec",
+      "proprietary": false,
+      "disclosureTime": "2021-09-20T11:51:45Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.apache.santuario",
+        "artifactId": "xmlsec"
+      }
+    },
+    "SNYK-JAVA-ORGAPACHESANTUARIO-30029": {
+      "id": "SNYK-JAVA-ORGAPACHESANTUARIO-30029",
+      "title": "XML signature spoofing",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+      "credit": [
+        "James Forshaw"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[1.4.0,1.4.8)",
+          "[1.5.0,1.5.5)"
+        ]
+      },
+      "fixedIn": [
+        "1.4.8",
+        "1.5.5"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 4.3,
+      "moduleName": "org.apache.santuario:xmlsec",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:L/A:N",
+          "cvssV3BaseScore": 4.3,
+          "modificationTime": "2023-02-09T11:23:50.108949Z"
+        }
+      ],
+      "description": "## Overview\n[org.apache.santuario:xmlsec](https://mvnrepository.com/artifact/org.apache.santuario/xmlsec) is a package to provide implementation of the primary security standards for XML, XML-Signature Syntax and Processing and XML Encryption Syntax and Processing.\nAffected versions of this package are vulnerable to XML signature spoofing. The class `DOMCanonicalizationMethod` within `jcp/xml/dsig/internal/dom/DOMCanonicalizationMethod.java` allows context-dependent attackers to spoof an XML Signature by using the CanonicalizationMethod parameter to specify an arbitrary weak \"canonicalization algorithm to apply to the SignedInfo part of the Signature.\"\n## Remediation\nUpgrade `org.apache.santuario:xmlsec` to version 1.4.8, 1.5.5 or higher.\n## References\n- [Apache Mail Archives](http://santuario.apache.org/secadv.data/CVE-2013-2172.txt.asc)\n- [GitHub Commit](https://github.com/apache/santuario-java/commit/8e8f8bf92a43608d7d5f9e357fae19244454a61f)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2013-2172)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2013-2172"
+        ],
+        "CWE": [
+          "CWE-310"
+        ]
+      },
+      "packageName": "org.apache.santuario:xmlsec",
+      "proprietary": false,
+      "disclosureTime": "2013-08-20T22:55:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.apache.santuario",
+        "artifactId": "xmlsec"
+      }
+    },
+    "SNYK-JAVA-ORGAPACHESANTUARIO-30030": {
+      "id": "SNYK-JAVA-ORGAPACHESANTUARIO-30030",
+      "title": "Denial of Service (DoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+      "credit": [
+        "James Forshaw"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,1.5.6)"
+        ]
+      },
+      "fixedIn": [
+        "1.5.6"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 4.3,
+      "moduleName": "org.apache.santuario:xmlsec",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:R/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 4.3,
+          "modificationTime": "2023-02-09T11:24:07.469992Z"
+        }
+      ],
+      "description": "## Overview\n\n[org.apache.santuario:xmlsec](https://mvnrepository.com/artifact/org.apache.santuario/xmlsec) is an package to provide implementation of the primary security standards for XML, XML-Signature Syntax and Processing and XML Encryption Syntax and Processing.\n\n\nAffected versions of this package are vulnerable to Denial of Service (DoS).\nWhen applying Transforms, it allows remote attackers to cause a denial of service (memory consumption) via crafted Document Type Definitions (DTDs), related to signatures.\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## Remediation\n\nUpgrade `org.apache.santuario:xmlsec` to version 1.5.6 or higher.\n\n\n## References\n\n- [Apache Mail Archives](https://cwiki.apache.org/confluence/download/attachments/27821224/cve-2013-4517.txt.asc)\n\n- [GitHub Commit](https://github.com/apache/santuario-java/commit/a09b9042f7759d094f2d49f40fc7bcf145164b25)\n\n- [Redhat Bugzilla](https://bugzilla.redhat.com/CVE-2013-4517)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2013-4517"
+        ],
+        "CWE": [
+          "CWE-399"
+        ]
+      },
+      "packageName": "org.apache.santuario:xmlsec",
+      "proprietary": false,
+      "disclosureTime": "2013-12-19T16:51:49Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.apache.santuario",
+        "artifactId": "xmlsec"
+      }
+    },
+    "SNYK-JAVA-ORGAPACHESANTUARIO-30031": {
+      "id": "SNYK-JAVA-ORGAPACHESANTUARIO-30031",
+      "title": "Denial of Service (DoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[1.4.0,1.4.8)",
+          "[1.5.0,1.5.3)"
+        ]
+      },
+      "fixedIn": [
+        "1.4.8",
+        "1.5.3"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 5.3,
+      "moduleName": "org.apache.santuario:xmlsec",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2023-02-09T11:24:14.890754Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 5.3,
+          "modificationTime": "2023-02-09T11:24:54.350446Z"
+        }
+      ],
+      "description": "## Overview\n[`org.apache.santuario:xmlsec`](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22xmlsec%22)\nUnspecified vulnerability in Oracle Java SE 7u40 and earlier, Java SE 6u60 and earlier, JRockit R28.2.8 and earlier, JRockit R27.7.6 and earlier, and Java SE Embedded 7u40 and earlier allows remote attackers to affect availability via unknown vectors related to Security.\n\n## Details\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\n\n## References\n\n- [Redhat Bugzilla](https://bugzilla.redhat.com/CVE-2013-5823)\n- [Apache-SVN](http://svn.apache.org/viewvc?view=revision&revision=1367492)\n- [Patch Diff](http://hg.openjdk.java.net/jdk7u/jdk7u/jdk/rev/a7758faab30d)\n- [Jira Issue](https://issues.apache.org/jira/browse/SANTUARIO-334)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2013-5823"
+        ],
+        "CWE": [
+          "CWE-400"
+        ]
+      },
+      "packageName": "org.apache.santuario:xmlsec",
+      "proprietary": false,
+      "disclosureTime": "2013-10-15T16:51:49Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.apache.santuario",
+        "artifactId": "xmlsec"
+      }
+    },
+    "SNYK-JAVA-ORGKEYCLOAK-2987457": {
+      "id": "SNYK-JAVA-ORGKEYCLOAK-2987457",
+      "title": "Arbitrary Code Execution",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,19.0.2)"
+        ]
+      },
+      "fixedIn": [
+        "19.0.2"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "high",
+      "cvssScore": 7.2,
+      "moduleName": "org.keycloak:keycloak-saml-core",
+      "cvssDetails": [
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:H/PR:H/UI:R/S:U/C:H/I:H/A:H",
+          "cvssV3BaseScore": 6.4,
+          "modificationTime": "2023-03-26T14:49:54.039484Z"
+        },
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:H/UI:N/S:U/C:H/I:H/A:H",
+          "cvssV3BaseScore": 7.2,
+          "modificationTime": "2022-08-12T01:11:07.213518Z"
+        }
+      ],
+      "description": "## Overview\n[org.keycloak:keycloak-saml-core](https://github.com/keycloak/keycloak.git/keycloak-saml-core) is an Identity and Access Management plugin for Keycloak.\nAffected versions of this package are vulnerable to Arbitrary Code Execution. It allows arbitrary Javascript to be uploaded for SAML protocol mapper even if UPLOAD_SCRIPTS feature disabled.\r\nAn issue was discovered in Keycloak that allows arbitrary Javascript to be uploaded for the SAML protocol mapper even if the UPLOAD_SCRIPTS feature is disabled.\n## Remediation\nUpgrade `org.keycloak:keycloak-saml-core` to version 19.0.2 or higher.\n## References\n- [GitHub Advisory](https://github.com/advisories/GHSA-q2gp-gph3-88x9)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=2115392)\n- [RedHat CVE Database](https://access.redhat.com/security/cve/CVE-2022-2668)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2022-2668"
+        ],
+        "CWE": [
+          "CWE-94"
+        ],
+        "GHSA": [
+          "GHSA-q2gp-gph3-88x9"
+        ]
+      },
+      "packageName": "org.keycloak:keycloak-saml-core",
+      "proprietary": false,
+      "disclosureTime": "2022-08-06T00:00:42Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.keycloak",
+        "artifactId": "keycloak-saml-core"
+      }
+    },
+    "SNYK-JAVA-ORGKEYCLOAK-31398": {
+      "id": "SNYK-JAVA-ORGKEYCLOAK-31398",
+      "title": "Denial of Service (DoS)",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[1.2.0.Final, 2.5.5.Final)"
+        ]
+      },
+      "fixedIn": [
+        "2.5.5.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "moduleName": "org.keycloak:keycloak-saml-core",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2022-01-03T16:25:05.491443Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "high",
+          "cvssV3Vector": "CVSS:3.0/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:N/A:H",
+          "cvssV3BaseScore": 7.5,
+          "modificationTime": "2023-03-26T14:50:34.332535Z"
+        }
+      ],
+      "description": "## Overview\r\n[`org.keycloak:keycloak-saml-core`](http://search.maven.org/#search%7Cga%7C1%7Ca%3A%22keycloak-saml-core%22)\r\nAffected versions of this package are vulnerable to Denial of Service (DoS) attacks. It mishandles `Logout` requests that contain an `Extension` element, which triggers an infinite loop.\r\n\r\n## Details\r\nDenial of Service (DoS) describes a family of attacks, all aimed at making a system inaccessible to its intended and legitimate users.\r\n\r\nUnlike other vulnerabilities, DoS attacks usually do not aim at breaching security. Rather, they are focused on making websites and services unavailable to genuine users resulting in downtime.\r\n\r\nOne popular Denial of Service vulnerability is DDoS (a Distributed Denial of Service), an attack that attempts to clog network pipes to the system by generating a large volume of traffic from many machines.\r\n\r\nWhen it comes to open source libraries, DoS vulnerabilities allow attackers to trigger such a crash or crippling of the service by using a flaw either in the application code or from the use of open source libraries.\r\n\r\nTwo common types of DoS vulnerabilities:\r\n\r\n* High CPU/Memory Consumption- An attacker sending crafted requests that could cause the system to take a disproportionate amount of time to process. For example, [commons-fileupload:commons-fileupload](SNYK-JAVA-COMMONSFILEUPLOAD-30082).\r\n\r\n* Crash - An attacker sending crafted requests that could cause the system to crash. For Example,  [npm `ws` package](npm:ws:20171108)\r\n\r\n## References\r\n- [NVD](https://web.nvd.nist.gov/view/vuln/detail?vulnId=CVE-2017-2646)\r\n- [Redhat Security Advisory](https://access.redhat.com/security/cve/cve-2017-2646)",
+      "identifiers": {
+        "CVE": [
+          "CVE-2017-2646"
+        ],
+        "CWE": [
+          "CWE-400"
+        ]
+      },
+      "packageName": "org.keycloak:keycloak-saml-core",
+      "proprietary": false,
+      "disclosureTime": "2017-03-27T03:25:08Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.keycloak",
+        "artifactId": "keycloak-saml-core"
+      }
+    },
+    "SNYK-JAVA-ORGKEYCLOAK-31579": {
+      "id": "SNYK-JAVA-ORGKEYCLOAK-31579",
+      "title": "Information Exposure",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+      "credit": [
+        "Hynek Mlnarik"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.5.1.Final)"
+        ]
+      },
+      "fixedIn": [
+        "2.5.1.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 4.3,
+      "moduleName": "org.keycloak:keycloak-saml-core",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 4.3,
+          "modificationTime": "2023-02-09T11:23:56.865064Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:N/I:N/A:L",
+          "cvssV3BaseScore": 4.3,
+          "modificationTime": "2023-02-09T11:25:03.481159Z"
+        }
+      ],
+      "description": "## Overview\n[`org.keycloak:keycloak-saml-core`](https://keycloak.org) is an open Source Identity and Access Management for modern Applications and Services.\n\nAffected versions of the package are vulnerable to Information Exposure. In certain cases, the SAML request parser replaces special strings with system properties.\n\n## Remediation\nUpgrade `org.keycloak:keycloak-saml-core` to version 2.5.1.Final or higher.\n\n## References\n- [Redhat Bugzilla](https://bugzilla.redhat.com/show_bug.cgi?id&#x3D;1410481)\n- [Github PR](https://github.com/keycloak/keycloak/pull/3715)\n- [Github Commit](https://github.com/keycloak/keycloak/pull/3715/commits/0cb5ba0f6e83162d221681f47b470c3042eef237)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2015-2582"
+        ],
+        "CWE": [
+          "CWE-200"
+        ]
+      },
+      "packageName": "org.keycloak:keycloak-saml-core",
+      "proprietary": false,
+      "disclosureTime": "2015-07-16T10:59:00Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.keycloak",
+        "artifactId": "keycloak-saml-core"
+      }
+    },
+    "SNYK-JAVA-ORGKEYCLOAK-32107": {
+      "id": "SNYK-JAVA-ORGKEYCLOAK-32107",
+      "title": "Host Header Injection",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:N/I:H/A:N",
+      "credit": [
+        "Unknown"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.0.0.Final)"
+        ]
+      },
+      "fixedIn": [
+        "2.0.0.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "high",
+      "cvssScore": 7.5,
+      "moduleName": "org.keycloak:keycloak-saml-core",
+      "cvssDetails": [],
+      "description": "## Overview\n[org.keycloak:keycloak-saml-core](https://github.com/keycloak/keycloak) is an access Management for modern Applications and Services.\n\nAffected versions of this package are vulnerable to Host Header Injection, causing the application to send a poisoned URL as the password reset link.\n\n## Remediation\nUpgrade `org.keycloak:keycloak-saml-core` to version 2.0.0 or higher.\n\n## References\n- [GitHub Commit](https://github.com/keycloak/keycloak-documentation/pull/268/commits/a2b58aadee42af2c375b72e86dffc2cf23cc3770)\n- [NVD](https://nvd.nist.gov/vuln/detail/CVE-2017-1000500)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2017-1000500"
+        ],
+        "CWE": [
+          "CWE-444"
+        ]
+      },
+      "packageName": "org.keycloak:keycloak-saml-core",
+      "proprietary": false,
+      "disclosureTime": "2017-12-14T17:51:09.051000Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.keycloak",
+        "artifactId": "keycloak-saml-core"
+      }
+    },
+    "SNYK-JAVA-ORGKEYCLOAK-72428": {
+      "id": "SNYK-JAVA-ORGKEYCLOAK-72428",
+      "title": "Information Exposure",
+      "CVSSv3": "CVSS:3.1/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+      "credit": [
+        "Hynek Mlnarik"
+      ],
+      "semver": {
+        "vulnerable": [
+          "[,2.5.1.Final)"
+        ]
+      },
+      "fixedIn": [
+        "2.5.1.Final"
+      ],
+      "insights": {
+        "triageAdvice": null
+      },
+      "language": "java",
+      "severity": "medium",
+      "cvssScore": 6.5,
+      "moduleName": "org.keycloak:keycloak-saml-core",
+      "cvssDetails": [
+        {
+          "assigner": "NVD",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.5,
+          "modificationTime": "2022-01-03T16:25:10.074358Z"
+        },
+        {
+          "assigner": "Red Hat",
+          "severity": "medium",
+          "cvssV3Vector": "CVSS:3.0/AV:N/AC:L/PR:L/UI:N/S:U/C:H/I:N/A:N",
+          "cvssV3BaseScore": 6.5,
+          "modificationTime": "2023-03-26T14:50:27.967470Z"
+        }
+      ],
+      "description": "## Overview\n[org.keycloak:keycloak-saml-core](https://github.com/hmlnarik/keycloak) is an Open Source Identity and Access Management For Modern Applications and Services.\r\n\r\nAffected versions of this package are vulnerable to Information Exposure. While parsing `SAML` messages, the `StaxParserUtil` class replaced special strings for obtaining attribute values with system property. This could allow an attacker to determine values of system properties at the attacked system by formatting the `SAML` request ID field to be the chosen system property which could be obtained in the `InResponseTo` field in the response.\r\n\r\n## Remediation\r\nUpgrade `org.keycloak:keycloak-saml-core` to version 2.5.1 or higher.\n\n## References\n- [GitHub Commit](https://github.com/keycloak/keycloak/pull/3715/commits/0cb5ba0f6e83162d221681f47b470c3042eef237)\n- [RedHat Bugzilla Bug](https://bugzilla.redhat.com/show_bug.cgi?id=CVE-2017-2582)\n",
+      "identifiers": {
+        "CVE": [
+          "CVE-2017-2582"
+        ],
+        "CWE": [
+          "CWE-200"
+        ]
+      },
+      "packageName": "org.keycloak:keycloak-saml-core",
+      "proprietary": false,
+      "disclosureTime": "2017-01-10T17:16:51Z",
+      "packageManager": "maven",
+      "mavenModuleName": {
+        "groupId": "org.keycloak",
+        "artifactId": "keycloak-saml-core"
+      }
+    }
+  },
+  "issues": [
+    {
+      "pkgName": "org.apache.santuario:xmlsec",
+      "pkgVersion": "1.5.1",
+      "issueId": "SNYK-JAVA-ORGAPACHESANTUARIO-1655558",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.apache.santuario:xmlsec",
+      "pkgVersion": "1.5.1",
+      "issueId": "SNYK-JAVA-ORGAPACHESANTUARIO-30029",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.apache.santuario:xmlsec",
+      "pkgVersion": "1.5.1",
+      "issueId": "SNYK-JAVA-ORGAPACHESANTUARIO-30030",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.apache.santuario:xmlsec",
+      "pkgVersion": "1.5.1",
+      "issueId": "SNYK-JAVA-ORGAPACHESANTUARIO-30031",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.keycloak:keycloak-saml-core",
+      "pkgVersion": "1.8.1.Final",
+      "issueId": "SNYK-JAVA-ORGKEYCLOAK-2987457",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.keycloak:keycloak-saml-core",
+      "pkgVersion": "1.8.1.Final",
+      "issueId": "SNYK-JAVA-ORGKEYCLOAK-31398",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.keycloak:keycloak-saml-core",
+      "pkgVersion": "1.8.1.Final",
+      "issueId": "SNYK-JAVA-ORGKEYCLOAK-31579",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.keycloak:keycloak-saml-core",
+      "pkgVersion": "1.8.1.Final",
+      "issueId": "SNYK-JAVA-ORGKEYCLOAK-32107",
+      "fixInfo": {}
+    },
+    {
+      "pkgName": "org.keycloak:keycloak-saml-core",
+      "pkgVersion": "1.8.1.Final",
+      "issueId": "SNYK-JAVA-ORGKEYCLOAK-72428",
+      "fixInfo": {}
+    }
+  ],
+  "org": {
+    "id": "94ce9c4c-49c4-493a-8f69-768d3ebf33d6",
+    "name": "olavtar"
+  }
+}
