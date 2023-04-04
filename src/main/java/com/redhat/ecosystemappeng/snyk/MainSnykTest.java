@@ -83,13 +83,15 @@ public class MainSnykTest {
         System.out.println(rootPkg.getPkgName());
         List<MavenPackage> packages = rootPkg.getDependencies();
         for (MavenPackage aPackage : packages) {
-            aPackage.getPkgName();
-            System.out.println(aPackage.getPkgName() + " # Direct: " + aPackage.getVulnerabilities().size());
-            for (MavenPackage pk : aPackage.getDependencies()) {
-                System.out.println("-" + pk.getPkgName());
-                System.out.println("#Direct: " + pk.getDependencies().size());
-                System.out.println("#Transative: " + pk.getVulnerabilities().size());
-            }
+            System.out.println("*** " + aPackage.getPkgName());
+            System.out.println(" # Direct : " + aPackage.countDirectVulnerabilities(aPackage));
+            System.out.println(" # Transitive : " + aPackage.countTransitiveVulnerabilities(aPackage));
+
+            //            for (MavenPackage pk : aPackage.getDependencies()) {
+//                System.out.println("-" + pk.getPkgName());
+//                System.out.println("#Direct: " + pk.getDependencies().size());
+//                System.out.println("#Transative: " + pk.getVulnerabilities().size());
+//            }
         }
 
 

@@ -1,9 +1,7 @@
 package com.redhat.ecosystemappeng.snyk;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 public class MavenPackage {
 
@@ -49,6 +47,20 @@ public class MavenPackage {
     }
     public void addVulnerability(IssuesData issuesData) {
         vulnerabilities.add(issuesData);
+    }
+
+    public int countDirectVulnerabilities(MavenPackage aPackage) {
+        List<IssuesData> vulnerabilities = aPackage.getVulnerabilities();
+        return vulnerabilities.size();
+    }
+
+    public int countTransitiveVulnerabilities(MavenPackage aPackage) {
+        int transitive = 0;
+        for (MavenPackage dependency : aPackage.getDependencies()) {
+            System.out.println(dependency.getPkgName());
+            transitive += dependency.countDirectVulnerabilities(dependency) + dependency.countTransitiveVulnerabilities(dependency);
+        }
+        return transitive;
     }
 
 //
