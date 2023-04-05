@@ -49,16 +49,16 @@ public class MavenPackage {
         vulnerabilities.add(issuesData);
     }
 
-    public int countDirectVulnerabilities(MavenPackage aPackage) {
-        List<IssuesData> vulnerabilities = aPackage.getVulnerabilities();
+    public int countDirectVulnerabilities() {
         return vulnerabilities.size();
     }
 
-    public int countTransitiveVulnerabilities(MavenPackage aPackage) {
+    public int countTransitiveVulnerabilities() {
         int transitive = 0;
-        for (MavenPackage dependency : aPackage.getDependencies()) {
-            System.out.println(dependency.getPkgName());
-            transitive += dependency.countDirectVulnerabilities(dependency) + dependency.countTransitiveVulnerabilities(dependency);
+        for (MavenPackage dependency : dependencies) {
+//            System.out.println(dependency.getPkgName());
+//            System.out.println(dependency.countDirectVulnerabilities());
+            transitive += dependency.countDirectVulnerabilities() + dependency.countTransitiveVulnerabilities();
         }
         return transitive;
     }

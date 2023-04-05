@@ -20,10 +20,13 @@
 
 <div id="snyk" class="tabcontent">
     <h3>Total Vulnerabilities: ${issues?size}</h3>
-<#--    <ul>-->
-<#--        <#list mavenPackageList as mavenPackage>-->
-<#--            <li>${mavenPackage_index + 1}. Commonly Known Vulnerabilities: ${mavenPackage.pkgName}</li>-->
-<#--            <p>Highest Severity Vulnerability: ${mavenPackage.issueId}</p>-->
+    <h3>Vulnerable Dependencies: ${mavenPackageList?size}</h3>
+    <h3>Root Pkg Name: ${mavenObject.pkgName}</h3>
+    <ul>
+        <#list mavenObject.dependencies as mavenPackage>
+            <li>${mavenPackage_index + 1}. Dependency: ${mavenPackage.pkgName}</li>
+            <p># Direct Vulnerabilities: ${mavenPackage.countDirectVulnerabilities()}</p>
+            <p># Transitive Vulnerabilities: ${mavenPackage.countTransitiveVulnerabilities()}</p>
 <#--            <p>Highest CVSS Score: ${mavenPackage.cvssScore}/10</p>-->
 <#--            <p>Vulnerabilities: ${mavenPackage.severity} - ${mavenPackage.title}</p>-->
 <#--            <p>Current Version: ${mavenPackage.pkgVersion}</p>-->
@@ -31,21 +34,21 @@
 <#--            <p># Direct Vulnerabilities:</p>-->
 <#--            <p># Transitive Vulnerabilities:</p>-->
 
-<#--        </#list>-->
-<#--    </ul>-->
-    <#list mavenPackageList as key, value>
-        <li>ModuleName: ${key}</li>
-        <p>cvssScore: ${value.cvssScore}</p>
-        <p>id: ${value.issueId}</p>
-        <p># Direct Vulnerabilities: ${value.countDirectDeps}</p>
-        <p>Current Version: ${value.pkgVersion}</p>
+        </#list>
+    </ul>
+<#--    <#list mavenPackageList as key, value>-->
+<#--        <li>ModuleName: ${key}</li>-->
+<#--        <p>cvssScore: ${value.cvssScore}</p>-->
+<#--        <p>id: ${value.issueId}</p>-->
+<#--        <p># Direct Vulnerabilities: ${value.countDirectDeps}</p>-->
+<#--        <p>Current Version: ${value.pkgVersion}</p>-->
 
 <#--        <#assign fixedInArray = [value.fixedIn]>-->
 <#--        <p>Recommended version:-->
 <#--        <#list fixedIn as version>-->
 <#--            <li>${version}</li>-->
 <#--        </#list></p>-->
-    </#list>
+<#--    </#list>-->
 </div>
 
 <div id="tidelift" class="tabcontent">
