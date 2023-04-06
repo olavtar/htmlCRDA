@@ -24,16 +24,44 @@
     <h3>Root Pkg Name: ${mavenObject.pkgName}</h3>
     <ul>
         <#list mavenObject.dependencies as mavenPackage>
-            <li>${mavenPackage_index + 1}. Dependency: ${mavenPackage.pkgName}</li>
-            <p># Direct Vulnerabilities: ${mavenPackage.countDirectVulnerabilities()}</p>
-            <p># Transitive Vulnerabilities: ${mavenPackage.countTransitiveVulnerabilities()}</p>
-<#--            <p>Highest CVSS Score: ${mavenPackage.cvssScore}/10</p>-->
-<#--            <p>Vulnerabilities: ${mavenPackage.severity} - ${mavenPackage.title}</p>-->
-<#--            <p>Current Version: ${mavenPackage.pkgVersion}</p>-->
-<#--            <p>Recommended Version:</p>-->
-<#--            <p># Direct Vulnerabilities:</p>-->
-<#--            <p># Transitive Vulnerabilities:</p>-->
-
+<#--        <#assign directVul = ${mavenPackage.countDirectVulnerabilities()} />-->
+<#--        <#assign transitiveVul = ${mavenPackage.countTransitiveVulnerabilities()} />-->
+            <#if (mavenPackage.countDirectVulnerabilities() != 0 || mavenPackage.countTransitiveVulnerabilities() != 0) >
+                <li>Dependency: ${mavenPackage.pkgName}</li>
+                <p>Current Version: ${mavenPackage.pkgVersion}</p>
+                <p># Direct Vulnerabilities: ${mavenPackage.countDirectVulnerabilities()}</p>
+                <p># Transitive Vulnerabilities: ${mavenPackage.countTransitiveVulnerabilities()}</p>
+                <#if (mavenPackage.countDirectVulnerabilities() != 0) >
+                    <p>Highest CVSS Score: ${mavenPackage.getHighestVulnerability().cvssScore}</p>
+                    <p>Highest Severity Vulnerability: ${mavenPackage.getHighestVulnerability().id}</p>
+                 </#if>
+                <p>Vulnerabilities:
+                <ul>
+                    <#list mavenPackage.vulnerabilities as vulnerability>
+                        <p>${vulnerability.severity}  - ${vulnerability.title} - ${vulnerability.cvssScore} - ${vulnerability.id}</p>
+                    </#list>
+                </ul>
+                </p>
+                <p>Transitive Dependencies: </p>
+                <ul>
+                    <#list mavenPackage.dependencies as transDependency>
+                        <#if (transDependency.countDirectVulnerabilities() != 0 ) >
+                            <li>Dependency: ${transDependency.pkgName}</li>
+                            <p>Current Version: ${transDependency.pkgVersion}</p>
+                            <p># Direct Vulnerabilities: ${transDependency.countDirectVulnerabilities()}</p>
+                            <p>Highest CVSS Score: ${transDependency.getHighestVulnerability().cvssScore}</p>
+                            <p>Highest Severity Vulnerability: ${transDependency.getHighestVulnerability().id}</p>
+                            <p>Vulnerabilities:
+                                <ul>
+                                    <#list transDependency.vulnerabilities as transVulnerability>
+                                        <p>${transVulnerability.severity}  - ${transVulnerability.title} - ${transVulnerability.cvssScore} - ${transVulnerability.id}</p>
+                                    </#list>
+                                </ul>
+                            </p>
+                        </#if>
+                    </#list>
+                </ul>
+            </#if>
         </#list>
     </ul>
 <#--    <#list mavenPackageList as key, value>-->

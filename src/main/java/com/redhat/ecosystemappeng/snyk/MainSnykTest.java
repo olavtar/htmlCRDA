@@ -35,7 +35,7 @@ public class MainSnykTest {
         Configuration cfg = new Configuration(Configuration.VERSION_2_3_32);
 
         // Where do we load the templates from:
- //       cfg.setClassForTemplateLoading(MainSnykTest.class, "/templates");
+        //       cfg.setClassForTemplateLoading(MainSnykTest.class, "/templates");
         cfg.setDirectoryForTemplateLoading(new File("/Users/olgalavtar/repos/htmlCRDA/src/main/java/com/redhat/ecosystemappeng/templates"));
 
         // Some other recommended settings:
@@ -54,10 +54,10 @@ public class MainSnykTest {
 //        MavenPackage mavenPackage = new MavenPackage();
 //        Map<String, MavenPackage> mavenPackageList = mavenPackage.getReportData(root, graphNodes);
 
-      //  System.out.println(mavenPackageList);
-          input.put("issues", issues);
-          input.put("mavenPackageList", mavenPackageList);
-          input.put("mavenObject", rootPkg);
+        //  System.out.println(mavenPackageList);
+        input.put("issues", issues);
+        input.put("mavenPackageList", mavenPackageList);
+        input.put("mavenObject", rootPkg);
 
         // 2.2. Get the template
         Template template = cfg.getTemplate("snykreport.ftlh");
@@ -93,7 +93,14 @@ public class MainSnykTest {
             int transitiveVul = aPackage.countTransitiveVulnerabilities();
             System.out.println(" # Direct : " + directVul);
             System.out.println(" # Transitive : " + transitiveVul);
-            if(directVul == 0 && transitiveVul ==0) {
+            List<MavenPackage> transVulDep = aPackage.getVulnerableDeps();
+            System.out.println(" # in the List : " + transVulDep.size());
+
+            if (directVul != 0) {
+                IssuesData highestVul = aPackage.getHighestVulnerability();
+            }
+
+            if (directVul == 0 && transitiveVul == 0) {
                 packagesWithVulnerabilities.remove(aPackage);
             }
         }
@@ -117,9 +124,9 @@ public class MainSnykTest {
             mavenPackage.setPkgVersion(pkg.info.version);
             packages.put(pkg.id, mavenPackage);
         }
-  //      System.out.println("Packages size: " + packages.size());
+        //      System.out.println("Packages size: " + packages.size());
         //iterate through graph Nodes and for each node lookup maven pkg using nodeId
-        for (RequestNode node: root.depGraph.graph.nodes) {
+        for (RequestNode node : root.depGraph.graph.nodes) {
             MavenPackage nodePkg = packages.get(node.nodeId);
             ArrayList<RequestDep> nodeDeps = node.getDeps();
             //iterate through deps of Node and for each dep: nodePkg.addDependency(packages.get(deps))
@@ -131,12 +138,12 @@ public class MainSnykTest {
         //Iterate through Issues
         //For each one, get the corresponding Maven package and issuesData, and addVulnerability to it
         ArrayList<Issue> issues = responseRoot.issues;
-        for (Issue issue:issues) {
+        for (Issue issue : issues) {
             String version = issue.pkgVersion;
             String name = issue.pkgName;
-            for ( Map.Entry<String, MavenPackage> entry : packages.entrySet()) {
+            for (Map.Entry<String, MavenPackage> entry : packages.entrySet()) {
                 if (entry.getValue().getPkgName().equals(name) && entry.getValue().getPkgVersion().equals(version)) {
-                    String key =  entry.getKey();
+                    String key = entry.getKey();
                     MavenPackage mavenPackage = packages.get(key);
                     IssuesData issuesData = issuesDataMap.get(issue.issueId);
                     mavenPackage.addVulnerability(issuesData);
@@ -145,7 +152,7 @@ public class MainSnykTest {
         }
 
 
-     return packages.get(root.depGraph.graph.rootNodeId);
+        return packages.get(root.depGraph.graph.rootNodeId);
     }
 
 }

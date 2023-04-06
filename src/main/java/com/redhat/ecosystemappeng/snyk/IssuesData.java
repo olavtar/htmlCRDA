@@ -15,6 +15,119 @@ public class IssuesData {
     public ArrayList<CvssDetail> cvssDetails = new ArrayList<>();
     public double cvssScore;
     public String description;
+
+    public String getcVSSv3() {
+        return cVSSv3;
+    }
+
+    public void setcVSSv3(String cVSSv3) {
+        this.cVSSv3 = cVSSv3;
+    }
+
+    public ArrayList<String> getCredit() {
+        return credit;
+    }
+
+    public void setCredit(ArrayList<String> credit) {
+        this.credit = credit;
+    }
+
+    public ArrayList<CvssDetail> getCvssDetails() {
+        return cvssDetails;
+    }
+
+    public void setCvssDetails(ArrayList<CvssDetail> cvssDetails) {
+        this.cvssDetails = cvssDetails;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public Date getDisclosureTime() {
+        return disclosureTime;
+    }
+
+    public void setDisclosureTime(Date disclosureTime) {
+        this.disclosureTime = disclosureTime;
+    }
+
+    public ArrayList<String> getFixedIn() {
+        return fixedIn;
+    }
+
+    public void setFixedIn(ArrayList<String> fixedIn) {
+        this.fixedIn = fixedIn;
+    }
+
+    public Identifiers getIdentifiers() {
+        return identifiers;
+    }
+
+    public void setIdentifiers(Identifiers identifiers) {
+        this.identifiers = identifiers;
+    }
+
+    public Insights getInsights() {
+        return insights;
+    }
+
+    public void setInsights(Insights insights) {
+        this.insights = insights;
+    }
+
+    public String getLanguage() {
+        return language;
+    }
+
+    public void setLanguage(String language) {
+        this.language = language;
+    }
+
+    public MavenModuleName getMavenModuleName() {
+        return mavenModuleName;
+    }
+
+    public void setMavenModuleName(MavenModuleName mavenModuleName) {
+        this.mavenModuleName = mavenModuleName;
+    }
+
+    public String getModuleName() {
+        return moduleName;
+    }
+
+    public void setModuleName(String moduleName) {
+        this.moduleName = moduleName;
+    }
+
+    public String getPackageManager() {
+        return packageManager;
+    }
+
+    public void setPackageManager(String packageManager) {
+        this.packageManager = packageManager;
+    }
+
+    public boolean isProprietary() {
+        return proprietary;
+    }
+
+    public void setProprietary(boolean proprietary) {
+        this.proprietary = proprietary;
+    }
+
+    public Semver getSemver() {
+        return semver;
+    }
+
+    public void setSemver(Semver semver) {
+        this.semver = semver;
+    }
+
     public Date disclosureTime;
     public ArrayList<String> fixedIn = new ArrayList<>();
     public String id;
