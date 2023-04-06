@@ -29,7 +29,7 @@ public class MainSnykTest {
         RequestRoot requestRoot = objectMapper.readValue(snykJsonRequest, RequestRoot.class);
 
         MavenPackage rootPkg = getRootPackage(requestRoot, root);
-  //      List<MavenPackage> mavenPackageList = getDisplayData(rootPkg);
+        //      List<MavenPackage> mavenPackageList = getDisplayData(rootPkg);
 
         // 1. Configure FreeMarker
         Configuration cfg = new Configuration(Configuration.VERSION_2_3_32);
@@ -52,7 +52,7 @@ public class MainSnykTest {
 
         //  System.out.println(mavenPackageList);
         input.put("issues", issues);
-       // input.put("mavenPackageList", mavenPackageList);
+        // input.put("mavenPackageList", mavenPackageList);
         input.put("mavenObject", rootPkg);
 
         // 2.2. Get the template
@@ -146,8 +146,6 @@ public class MainSnykTest {
                 }
             }
         }
-
-
         return packages.get(root.depGraph.graph.rootNodeId);
     }
 

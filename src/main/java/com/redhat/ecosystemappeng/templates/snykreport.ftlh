@@ -1,6 +1,8 @@
 <html>
 <head>
     <#include "snykstyles.ftlh">
+    <#include "patternfly.ftlh">
+<#--    <link rel="stylesheet" href="../css/patternfly.css">-->
 </head>
 <body>
 
@@ -22,7 +24,8 @@
     <h3>Total Vulnerabilities: ${issues?size}</h3>
     <h3>Vulnerable Dependencies: ${mavenObject.countVulnerableDependencies()}</h3>
     <h3>Root Pkg Name: ${mavenObject.pkgName}</h3>
-    <ul>
+
+    <ol class="pf-c-list">
         <#list mavenObject.dependencies as mavenPackage>
 <#--        <#assign directVul = ${mavenPackage.countDirectVulnerabilities()} />-->
 <#--        <#assign transitiveVul = ${mavenPackage.countTransitiveVulnerabilities()} />-->
@@ -36,14 +39,14 @@
                     <p>Highest Severity Vulnerability: ${mavenPackage.getHighestVulnerability().id}</p>
                  </#if>
                 <p>Vulnerabilities:
-                <ul>
+                <ul class="pf-c-list">
                     <#list mavenPackage.vulnerabilities as vulnerability>
                         <p>${vulnerability.severity}  - ${vulnerability.title} - ${vulnerability.cvssScore} - ${vulnerability.id}</p>
                     </#list>
                 </ul>
                 </p>
                 <p>Transitive Dependencies with vulnerabilites: </p>
-                <ul>
+                    <ol class="pf-c-list">
                     <#list mavenPackage.getVulnerableTransitiveDeps() as transDependency>
                         <#if (transDependency.countDirectVulnerabilities() != 0 ) >
                             <li>Dependency: ${transDependency.pkgName}</li>
@@ -52,18 +55,18 @@
                             <p>Highest CVSS Score: ${transDependency.getHighestVulnerability().cvssScore}</p>
                             <p>Highest Severity Vulnerability: ${transDependency.getHighestVulnerability().id}</p>
                             <p>Vulnerabilities:
-                                <ul>
-                                    <#list transDependency.vulnerabilities as transVulnerability>
-                                        <p>${transVulnerability.severity}  - ${transVulnerability.title} - ${transVulnerability.cvssScore} - ${transVulnerability.id}</p>
-                                    </#list>
-                                </ul>
+                            <ul class="pf-c-list">
+                                <#list transDependency.vulnerabilities as transVulnerability>
+                                    <p>${transVulnerability.severity}  - ${transVulnerability.title} - ${transVulnerability.cvssScore} - ${transVulnerability.id}</p>
+                                </#list>
+                            </ul>
                             </p>
                         </#if>
                     </#list>
-                </ul>
+                </ol>
             </#if>
         </#list>
-    </ul>
+    </ol>
 </div>
 
 <div id="tidelift" class="tabcontent">
