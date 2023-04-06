@@ -1,7 +1,5 @@
 package com.redhat.ecosystemappeng.snyk;
 
-import com.fasterxml.jackson.databind.node.ArrayNode;
-
 import java.util.ArrayList;
 import java.util.List;
 
@@ -56,6 +54,16 @@ public class MavenPackage {
         return vulnerabilities.size();
     }
 
+    public int countVulnerableDependencies() {
+        int totalVulnerableDeps = 0;
+        for (MavenPackage dependency : dependencies) {
+            if (dependency.countDirectVulnerabilities() != 0 || dependency.countTransitiveVulnerabilities() != 0) {
+                totalVulnerableDeps++;
+            }
+        }
+        return totalVulnerableDeps;
+    }
+
     public int countTransitiveVulnerabilities() {
         int transitive = 0;
         for (MavenPackage dependency : dependencies) {
@@ -76,7 +84,7 @@ public class MavenPackage {
         return highestVulIssueData;
     }
 
-    public List<MavenPackage> getVulnerableDeps() {
+    public List<MavenPackage> getVulnerableTransitiveDeps() {
         List<MavenPackage> vulDeps = new ArrayList<MavenPackage>();
         for (MavenPackage dependency : dependencies) {
             System.out.println(dependency.getPkgName());
@@ -88,7 +96,7 @@ public class MavenPackage {
                 vulDeps.add(dependency);
             }
             if (dependency.countTransitiveVulnerabilities() > 0) {
-                vulDeps.addAll(dependency.getVulnerableDeps());
+                vulDeps.addAll(dependency.getVulnerableTransitiveDeps());
             }
         }
         return vulDeps;
