@@ -9,6 +9,7 @@ import freemarker.template.Version;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.Writer;
+import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.*;
@@ -36,7 +37,10 @@ public class MainSnykTest {
 
         // Where do we load the templates from:
         //       cfg.setClassForTemplateLoading(MainSnykTest.class, "/templates");
-        cfg.setDirectoryForTemplateLoading(new File("/Users/olgalavtar/repos/htmlCRDA/src/main/java/com/redhat/ecosystemappeng/templates"));
+        ClassLoader loader = Thread.currentThread().getContextClassLoader();
+        URL url = loader.getResource("templates");
+        String path = url.getPath();
+        cfg.setDirectoryForTemplateLoading(new File(path));
 
         // Some other recommended settings:
         cfg.setIncompatibleImprovements(new Version(2, 3, 20));
