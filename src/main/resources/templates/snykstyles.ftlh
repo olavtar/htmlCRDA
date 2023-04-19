@@ -6,6 +6,52 @@
         height: 100%;
         margin: 0;
         font-family: Arial;
+        padding: 20px;
+    }
+
+    .accordion {
+        background-color: #eee;
+        /*color: #444;*/
+        color:#06c;
+
+        cursor: pointer;
+        padding: 18px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        transition: 0.4s;
+    }
+
+    .active, .accordion:hover {
+        background-color: #ccc;
+    }
+
+    .accordion:after {
+        content: '\002B';
+        color: #777;
+        font-weight: bold;
+        float: right;
+        margin-left: 5px;
+    }
+
+    .active:after {
+        content: "\2212";
+    }
+
+    .panel {
+        padding: 0 18px;
+        background-color: white;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-out;
+    }
+    .panel2 {
+        padding: 0 18px;
+        display: none;
+        background-color: white;
+        overflow: hidden;
     }
 
     /* Style tab links */
@@ -33,7 +79,7 @@
         height: fit-content;
     }
 
-    #redhat {background-color: red;}
-    #snyk {background-color: lightgreen;}
-    #tidelift {background-color: lightskyblue;}
+    /*#redhat {background-color: red;}*/
+    /*#snyk {background-color: lightgreen;}*/
+    /*#tidelift {background-color: lightskyblue;}*/
 </style>

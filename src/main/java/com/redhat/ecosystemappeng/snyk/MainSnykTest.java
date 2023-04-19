@@ -53,11 +53,18 @@ public class MainSnykTest {
 
         Map<String, Object> input = new HashMap<String, Object>();
         List<Issue> issues = root.getIssues();
+        String securityTitle = "Security Issues";
+        String securityDesc = "Dependencies with high common vulnerabilities and exposures (CVE) score.  Click this card to see the details of all CVE(s).";
+        String subTitle = "Dependencies with security issues in your stack";
+        String subDescription = "A list of the dependencies affected with common vulnerabilities and exposures (CVE).";
 
         //  System.out.println(mavenPackageList);
         input.put("issues", issues);
-        // input.put("mavenPackageList", mavenPackageList);
         input.put("mavenObject", rootPkg);
+        input.put("securityDesc", securityDesc);
+        input.put("securityTitle", securityTitle);
+        input.put("subTitle", subTitle);
+        input.put("subDescription", subDescription);
 
         // 2.2. Get the template
         Template template = cfg.getTemplate("snykreport.ftlh");
