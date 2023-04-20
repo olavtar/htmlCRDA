@@ -8,7 +8,9 @@
         font-family: Arial;
         padding: 20px;
     }
-
+    .hiddenRow {
+        padding: 0 !important;
+    }
     .accordion {
         background-color: #eee;
         /*color: #444;*/

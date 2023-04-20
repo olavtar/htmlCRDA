@@ -30,7 +30,7 @@ public class MainSnykTest {
         RequestRoot requestRoot = objectMapper.readValue(snykJsonRequest, RequestRoot.class);
 
         MavenPackage rootPkg = getRootPackage(requestRoot, root);
-        //      List<MavenPackage> mavenPackageList = getDisplayData(rootPkg);
+        List<MavenPackage> mavenPackageList = getDisplayData(rootPkg);
 
         // 1. Configure FreeMarker
         Configuration cfg = new Configuration(Configuration.VERSION_2_3_32);
@@ -54,9 +54,10 @@ public class MainSnykTest {
         Map<String, Object> input = new HashMap<String, Object>();
         List<Issue> issues = root.getIssues();
         String securityTitle = "Security Issues";
-        String securityDesc = "Dependencies with high common vulnerabilities and exposures (CVE) score.  Click this card to see the details of all CVE(s).";
+        String securityDesc = "Dependencies with high common vulnerabilities and exposures (CVE) score.";
         String subTitle = "Dependencies with security issues in your stack";
         String subDescription = "A list of the dependencies affected with common vulnerabilities and exposures (CVE).";
+        String insideHeader = "Commonly Known Vulnerabilities";
 
         //  System.out.println(mavenPackageList);
         input.put("issues", issues);
@@ -65,9 +66,10 @@ public class MainSnykTest {
         input.put("securityTitle", securityTitle);
         input.put("subTitle", subTitle);
         input.put("subDescription", subDescription);
+        input.put("insideHeader", insideHeader);
 
         // 2.2. Get the template
-        Template template = cfg.getTemplate("snykreport.ftlh");
+        Template template = cfg.getTemplate("report.ftlh");
 
         // 2.3. Generate the output
 
@@ -86,33 +88,36 @@ public class MainSnykTest {
     }
 
     // For testing
-//    private static List<MavenPackage> getDisplayData(MavenPackage rootPkg) {
-//        System.out.println("rootPkg");
-//        System.out.println(rootPkg.getPkgName());
-//        List<MavenPackage> packages = rootPkg.getDependencies();
-//        System.out.println("Packages size: " + packages.size());
-//        List<MavenPackage> packagesWithVulnerabilities = new ArrayList<MavenPackage>();
-//        packagesWithVulnerabilities.addAll(packages);
-//        System.out.println(packagesWithVulnerabilities.size());
-//
-//        for (MavenPackage aPackage : packages) {
-//            System.out.println("*** " + aPackage.getPkgName());
-//            int directVul = aPackage.countDirectVulnerabilities();
-//            int transitiveVul = aPackage.countTransitiveVulnerabilities();
-//            System.out.println(" # Direct : " + directVul);
-//            System.out.println(" # Transitive : " + transitiveVul);
-//            List<MavenPackage> transVulDep = aPackage.getVulnerableTransitiveDeps();
-//            System.out.println(" # in the List : " + transVulDep.size());
-//            if (directVul != 0) {
-//                IssuesData highestVul = aPackage.getHighestVulnerability();
-//            }
-//
-//            if (directVul == 0 && transitiveVul == 0) {
-//                packagesWithVulnerabilities.remove(aPackage);
-//            }
-//        }
-//        return packagesWithVulnerabilities;
-//    }
+    private static List<MavenPackage> getDisplayData(MavenPackage rootPkg) {
+        System.out.println("rootPkg");
+        System.out.println(rootPkg.getPkgName());
+        List<MavenPackage> packages = rootPkg.getDependencies();
+        System.out.println("Packages size: " + packages.size());
+        List<MavenPackage> packagesWithVulnerabilities = new ArrayList<MavenPackage>();
+        packagesWithVulnerabilities.addAll(packages);
+        System.out.println(packagesWithVulnerabilities.size());
+
+        for (MavenPackage aPackage : packages) {
+            System.out.println("*** " + aPackage.getPkgName());
+            int directVul = aPackage.countDirectVulnerabilities();
+            int transitiveVul = aPackage.countTransitiveVulnerabilities();
+            System.out.println(" # Direct : " + directVul);
+            System.out.println(" # Transitive : " + transitiveVul);
+            List<MavenPackage> transVulDep = aPackage.getVulnerableTransitiveDeps();
+            System.out.println(" # in the List : " + transVulDep.size());
+            if (directVul != 0) {
+                IssuesData highestVul = aPackage.getHighestVulnerability();
+            }
+
+            if (directVul == 0 && transitiveVul == 0) {
+                packagesWithVulnerabilities.remove(aPackage);
+            }
+
+            String htmlName = aPackage.getHtmlName();
+            System.out.println("hmtlName: " + htmlName);
+        }
+        return packagesWithVulnerabilities;
+    }
 
     private static MavenPackage getRootPackage(RequestRoot root, Root responseRoot) {
 

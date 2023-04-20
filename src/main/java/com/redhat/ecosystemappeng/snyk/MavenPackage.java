@@ -87,8 +87,8 @@ public class MavenPackage {
     public List<MavenPackage> getVulnerableTransitiveDeps() {
         List<MavenPackage> vulDeps = new ArrayList<MavenPackage>();
         for (MavenPackage dependency : dependencies) {
-            System.out.println(dependency.getPkgName());
-            System.out.println(dependency.countDirectVulnerabilities());
+//            System.out.println(dependency.getPkgName());
+//            System.out.println(dependency.countDirectVulnerabilities());
             if (dependency.countDirectVulnerabilities() == 0 && dependency.countTransitiveVulnerabilities() == 0) {
                 continue;
             }
@@ -101,4 +101,13 @@ public class MavenPackage {
         }
         return vulDeps;
     }
+
+    public String getHtmlName(){
+        String htmlName = pkgName.replace(".", "");
+        htmlName =htmlName.replace(":", "");
+        htmlName =htmlName.replace("-", "");
+
+        return htmlName;
+    }
+
 }

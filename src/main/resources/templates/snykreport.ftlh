@@ -1,17 +1,34 @@
 <html xmlns="http://www.w3.org/1999/html">
 <head>
-    <#include "patternfly.ftlh">
-    <#include "patternfly-addons.ftlh">
-<#--    <#include "patternfly-icons.ftlh">-->
-<#--    <#include "patternfly-pf-icons.ftlh">-->
-<#--    <#include "patternfly-fa-icons.ftlh">-->
-
-    <#include "fontawesome.ftlh">
+<#--    <#include "patternfly.min.ftlh">-->
+<#--    <#include "patternfly-addons.ftlh">-->
     <#include "snykstyles.ftlh">
-<#--    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="fonts.css" />
+    <!-- Include latest PatternFly CSS via CDN -->
+    <link
+            rel="stylesheet"
+            href="https://unpkg.com/@patternfly/patternfly/patternfly.css"
+            crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
 </head>
 <body>
+
+<div class="pf-c-card">
+    <div class="pf-c-card__title">
+        <span class="pf-c-icon">
+	    <i class="fa fa-shield-alt" aria-hidden="true"></i>
+	</span>
+        ${securityTitle}</div>
+    <div class="pf-c-card__body">${securityDesc}
+        <h3>Total Vulnerabilities: ${issues?size}</h3>
+        <h3>Vulnerable Dependencies: ${mavenObject.countVulnerableDependencies()}</h3>
+    </div>
+</div>
+
 
     <h1 class="pf-c-title pf-m-3xl">${securityTitle}</h1>
     <div>${securityDesc}</div>
@@ -20,7 +37,6 @@
     </br>
 
 
-<#--    <h3>Root Pkg Name: ${mavenObject.pkgName}</h3>-->
 <hr class="pf-c-divider" />
 </br>
 </br>
@@ -162,5 +178,7 @@
     }
 </script>
 
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 </body>
 </html>
